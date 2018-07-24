@@ -46,6 +46,11 @@ Beginner Tutorials
     :figure: /_static/img/thumbnails/babel.jpg
     :description: :doc:`/beginner/deep_learning_nlp_tutorial`
 
+.. customgalleryitem::
+   :figure: /_static/img/thumbnails/pytorch-logo-flat.png
+   :tooltip: Learn Hybrid Frontend through examples.
+   :description: :doc:`/beginner/hybrid_frontend_tutorial`
+
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -63,6 +68,9 @@ Beginner Tutorials
    beginner/transfer_learning_tutorial
    beginner/data_loading_tutorial
    beginner/deep_learning_nlp_tutorial
+   beginner/hybrid_frontend_tutorial
+   beginner/finetuning_torchvision_models_tutorial
+
 
 Intermediate Tutorials
 ----------------------
