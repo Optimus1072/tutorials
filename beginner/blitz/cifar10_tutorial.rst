@@ -157,7 +157,7 @@ Let us show some of the training images, for fun.
 
  .. code-block:: none
 
-    bird   cat   dog plane
+    frog   dog   car  bird
 
 
 2. Define a Convolution Neural Network
@@ -269,18 +269,18 @@ network and optimize.
 
  .. code-block:: none
 
-    [1,  2000] loss: 2.158
-    [1,  4000] loss: 1.823
-    [1,  6000] loss: 1.644
-    [1,  8000] loss: 1.563
-    [1, 10000] loss: 1.522
-    [1, 12000] loss: 1.452
-    [2,  2000] loss: 1.368
-    [2,  4000] loss: 1.355
-    [2,  6000] loss: 1.358
-    [2,  8000] loss: 1.308
-    [2, 10000] loss: 1.294
-    [2, 12000] loss: 1.266
+    [1,  2000] loss: 2.178
+    [1,  4000] loss: 1.854
+    [1,  6000] loss: 1.675
+    [1,  8000] loss: 1.585
+    [1, 10000] loss: 1.521
+    [1, 12000] loss: 1.483
+    [2,  2000] loss: 1.406
+    [2,  4000] loss: 1.382
+    [2,  6000] loss: 1.336
+    [2,  8000] loss: 1.346
+    [2, 10000] loss: 1.286
+    [2, 12000] loss: 1.289
     Finished Training
 
 
@@ -363,7 +363,7 @@ So, let's get the index of the highest energy:
 
  .. code-block:: none
 
-    Predicted:    cat   car  ship plane
+    Predicted:    cat plane plane plane
 
 
 The results seem pretty good.
@@ -441,16 +441,16 @@ not perform well:
 
  .. code-block:: none
 
-    Accuracy of plane : 59 %
+    Accuracy of plane : 71 %
     Accuracy of   car : 66 %
-    Accuracy of  bird : 26 %
-    Accuracy of   cat : 30 %
-    Accuracy of  deer : 58 %
-    Accuracy of   dog : 64 %
-    Accuracy of  frog : 63 %
-    Accuracy of horse : 49 %
-    Accuracy of  ship : 66 %
-    Accuracy of truck : 71 %
+    Accuracy of  bird : 41 %
+    Accuracy of   cat : 34 %
+    Accuracy of  deer : 47 %
+    Accuracy of   dog : 56 %
+    Accuracy of  frog : 48 %
+    Accuracy of horse : 65 %
+    Accuracy of  ship : 61 %
+    Accuracy of truck : 60 %
 
 
 Okay, so what next?
@@ -544,7 +544,7 @@ Where do I go next?
 .. _Chat with other users on Slack: http://pytorch.slack.com/messages/beginner/
 
 
-**Total running time of the script:** ( 1 minutes  57.654 seconds)
+**Total running time of the script:** ( 2 minutes  3.561 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_cifar10_tutorial.py:

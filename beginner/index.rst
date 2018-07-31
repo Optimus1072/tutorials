@@ -26,6 +26,26 @@ Beginner Tutorials
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This document provides solutions to a variety of use cases regarding the saving and loading of ...">
+
+.. only:: html
+
+    .. figure:: /beginner/images/thumb/sphx_glr_saving_loading_models_thumb.png
+
+        :ref:`sphx_glr_beginner_saving_loading_models.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /beginner/saving_loading_models
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="In this tutorial, you will learn how to train your network using transfer learning. You can rea...">
 
 .. only:: html
@@ -63,6 +83,26 @@ Beginner Tutorials
    :hidden:
 
    /beginner/data_loading_tutorial
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="**Author**: `Nathan Inkawhich &lt;https://github.com/inkawhich&gt;`__">
+
+.. only:: html
+
+    .. figure:: /beginner/images/thumb/sphx_glr_dcgan_faces_tutorial_thumb.png
+
+        :ref:`sphx_glr_beginner_dcgan_faces_tutorial.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /beginner/dcgan_faces_tutorial
 
 .. raw:: html
 
