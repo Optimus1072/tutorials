@@ -171,7 +171,7 @@ so it has a grad_fn
 
  .. code-block:: none
 
-    <AddBackward object at 0x7f3bccbcc0b8>
+    <AddBackward object at 0x7f7b0782b748>
 
 
 More operations on y:
@@ -227,7 +227,7 @@ flag in-place. The input flag defaults to ``True`` if not given.
 
     False
     True
-    <SumBackward0 object at 0x7f3c0bfff470>
+    <SumBackward0 object at 0x7f7b07102278>
 
 
 Gradients
@@ -333,8 +333,8 @@ just backprop random gradients
 
  .. code-block:: none
 
-    tensor([[3.3626, 0.7924],
-            [1.8231, 1.3395]])
+    tensor([[1.8767, 2.5478],
+            [0.8158, 0.9500]])
 
 
 You can also stops autograd from tracking history on Tensors
