@@ -120,6 +120,11 @@ tensor.
 
 
 
+
+
+
+
+
 Part 2 - Scripting a pure python function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -143,6 +148,29 @@ the ``@torch.jit.script`` decorator.
         for i in range(x):
             z = z * (i + 1)
         return z
+
+
+
+
+
+.. code-block:: pytb
+
+    Traceback (most recent call last):
+      File "/var/lib/jenkins/workspace/tutorials_repo/beginner_source/hybrid_frontend/learning_hybrid_frontend_through_example_tutorial.py", line 124, in <module>
+        @torch.jit.script
+      File "/opt/conda/lib/python3.6/site-packages/torch/jit/__init__.py", line 355, in script
+        graph = _jit_script_compile(typed_def, rcb)
+    RuntimeError: 
+    expected a int but found a Tensor:
+    @torch.jit.script
+    def script_fn(x):
+        z = torch.ones([1], dtype=torch.int64)
+        for i in range(x):
+                       ~ <--- HERE
+            z = z * (i + 1)
+        return z
+
+
 
 
 
@@ -315,7 +343,7 @@ However, such a model may not be exported to ONNX.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+**Total running time of the script:** ( 0 minutes  0.002 seconds)
 
 
 .. _sphx_glr_download_beginner_hybrid_frontend_learning_hybrid_frontend_through_example_tutorial.py:

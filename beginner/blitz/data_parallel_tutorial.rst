@@ -66,6 +66,11 @@ Import PyTorch modules and define parameters.
 
 
 
+
+
+
+
+
 Device
 
 
@@ -74,6 +79,11 @@ Device
 .. code-block:: python
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+
+
+
+
 
 
 Dummy DataSet
@@ -102,6 +112,11 @@ getitem
 
     rand_loader = DataLoader(dataset=RandomDataset(input_size, data_size),
                              batch_size=batch_size, shuffle=True)
+
+
+
+
+
 
 
 
@@ -138,6 +153,11 @@ Please pay attention to what is printed at batch rank 0.
 
 
 
+
+
+
+
+
 Create Model and DataParallel
 -----------------------------
 
@@ -162,6 +182,11 @@ our model using ``nn.DataParallel``. Then we can put our model on GPUs by
 
 
 
+
+
+
+
+
 Run the Model
 -------------
 
@@ -179,6 +204,25 @@ Now we can see the sizes of input and output tensors.
         print("Outside: input size", input.size(),
               "output_size", output.size())
 
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    In Model: input size torch.Size([30, 5]) output size torch.Size([30, 2])
+    Outside: input size torch.Size([30, 5]) output_size torch.Size([30, 2])
+            In Model: input size torch.Size([30, 5]) output size torch.Size([30, 2])
+    Outside: input size torch.Size([30, 5]) output_size torch.Size([30, 2])
+            In Model: input size torch.Size([30, 5]) output size torch.Size([30, 2])
+    Outside: input size torch.Size([30, 5]) output_size torch.Size([30, 2])
+            In Model: input size torch.Size([10, 5]) output size torch.Size([10, 2])
+    Outside: input size torch.Size([10, 5]) output_size torch.Size([10, 2])
 
 
 Results
@@ -290,7 +334,7 @@ http://pytorch.org/tutorials/beginner/former\_torchies/parallelism\_tutorial.htm
 
 
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+**Total running time of the script:** ( 0 minutes  0.002 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_data_parallel_tutorial.py:

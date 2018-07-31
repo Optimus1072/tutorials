@@ -25,6 +25,11 @@ Create a tensor of size (5 x 7) with uninitialized memory:
     a = torch.empty(5, 7, dtype=torch.float)
 
 
+
+
+
+
+
 Initialize a double tensor randomized with a normal distribution with mean=0,
 var=1:
 
@@ -36,6 +41,24 @@ var=1:
     a = torch.randn(5, 7, dtype=torch.double)
     print(a)
     print(a.size())
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[ 0.7731,  1.1841,  0.4369,  1.4678, -0.3540, -0.1704, -0.2069],
+            [ 0.1171,  0.6066, -1.2021, -2.2734,  0.6848,  0.6376,  0.0597],
+            [ 0.2098,  0.4232, -1.1318, -1.7867,  0.6867, -0.5642,  0.1156],
+            [ 0.0756, -1.1314,  0.0283,  0.8093,  0.6725,  0.3702,  0.7380],
+            [ 0.1322, -0.6269, -0.4644,  0.1190, -0.7236, -1.2217,  0.1213]],
+           dtype=torch.float64)
+    torch.Size([5, 7])
 
 
 .. note::
@@ -63,6 +86,28 @@ out-of-place version, and ``add_`` is the in-place version.
     print(a, b)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000],
+            [3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000],
+            [3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000],
+            [3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000],
+            [3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000, 3.5000]],
+           dtype=torch.float64) tensor([[7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000],
+            [7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000],
+            [7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000],
+            [7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000],
+            [7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000, 7.5000]],
+           dtype=torch.float64)
+
+
 Some operations like ``narrow`` do not have in-place versions, and
 hence, ``.narrow_`` does not exist. Similarly, some operations like
 ``fill_`` do not have an out-of-place version, so ``.fill`` does not
@@ -82,6 +127,11 @@ one-indexed)
     b = a[0, 3]  # select 1st row, 4th column from a
 
 
+
+
+
+
+
 Tensors can be also indexed with Python's slicing
 
 
@@ -90,6 +140,11 @@ Tensors can be also indexed with Python's slicing
 
 
     b = a[:, 3:5]  # selects all rows, 4th column and  5th column from a
+
+
+
+
+
 
 
 No camel casing
@@ -109,6 +164,22 @@ anymore. For example ``indexAdd`` is now called ``index_add_``
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[1., 1., 1., 1., 1.],
+            [1., 1., 1., 1., 1.],
+            [1., 1., 1., 1., 1.],
+            [1., 1., 1., 1., 1.],
+            [1., 1., 1., 1., 1.]])
+
+
+
 .. code-block:: python
 
 
@@ -119,10 +190,42 @@ anymore. For example ``indexAdd`` is now called ``index_add_``
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[ 10., 100.],
+            [ 10., 100.],
+            [ 10., 100.],
+            [ 10., 100.],
+            [ 10., 100.]])
+
+
+
 .. code-block:: python
 
     x.index_add_(1, torch.tensor([4, 0], dtype=torch.long), z)
     print(x)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[101.,   1.,   1.,   1.,  11.],
+            [101.,   1.,   1.,   1.,  11.],
+            [101.,   1.,   1.,   1.,  11.],
+            [101.,   1.,   1.,   1.,  11.],
+            [101.,   1.,   1.,   1.,  11.]])
 
 
 Numpy Bridge
@@ -145,11 +248,35 @@ Converting torch Tensor to numpy Array
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([1., 1., 1., 1., 1.])
+
+
+
 .. code-block:: python
 
 
     b = a.numpy()
     print(b)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    [1. 1. 1. 1. 1.]
 
 
 
@@ -159,6 +286,19 @@ Converting torch Tensor to numpy Array
     print(a)
     print(b) 	# see how the numpy array changed in value
 
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([2., 2., 2., 2., 2.])
+    [2. 2. 2. 2. 2.]
 
 
 Converting numpy Array to torch Tensor
@@ -175,6 +315,19 @@ Converting numpy Array to torch Tensor
     np.add(a, 1, out=a)
     print(a)
     print(b)  # see how changing the np array changed the torch Tensor automatically
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    [2. 2. 2. 2. 2.]
+    tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
 
 
 All the Tensors on the CPU except a CharTensor support converting to
@@ -202,7 +355,12 @@ from the CPU to GPU will retain its underlying type.
         # transfers it to CPU, back to
         # being a torch.LongTensor
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+
+
+
+
+
+**Total running time of the script:** ( 0 minutes  0.005 seconds)
 
 
 .. _sphx_glr_download_beginner_former_torchies_tensor_tutorial.py:

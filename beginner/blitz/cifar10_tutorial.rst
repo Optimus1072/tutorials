@@ -71,6 +71,11 @@ Using ``torchvision``, it’s extremely easy to load CIFAR10.
     import torchvision.transforms as transforms
 
 
+
+
+
+
+
 The output of torchvision datasets are PILImage images of range [0, 1].
 We transform them to Tensors of normalized range [-1, 1].
 
@@ -95,6 +100,19 @@ We transform them to Tensors of normalized range [-1, 1].
 
     classes = ('plane', 'car', 'bird', 'cat',
                'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
+    Files already downloaded and verified
 
 
 Let us show some of the training images, for fun.
@@ -125,6 +143,21 @@ Let us show some of the training images, for fun.
     # print labels
     print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
+
+
+
+
+.. image:: /beginner/blitz/images/sphx_glr_cifar10_tutorial_001.png
+    :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    bird   cat   dog plane
 
 
 2. Define a Convolution Neural Network
@@ -164,6 +197,11 @@ take 3-channel images (instead of 1-channel images as it was defined).
     net = Net()
 
 
+
+
+
+
+
 3. Define a Loss function and optimizer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Let's use a Classification Cross-Entropy loss and SGD with momentum.
@@ -177,6 +215,11 @@ Let's use a Classification Cross-Entropy loss and SGD with momentum.
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+
+
+
+
 
 
 4. Train the network
@@ -217,6 +260,30 @@ network and optimize.
     print('Finished Training')
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    [1,  2000] loss: 2.158
+    [1,  4000] loss: 1.823
+    [1,  6000] loss: 1.644
+    [1,  8000] loss: 1.563
+    [1, 10000] loss: 1.522
+    [1, 12000] loss: 1.452
+    [2,  2000] loss: 1.368
+    [2,  4000] loss: 1.355
+    [2,  6000] loss: 1.358
+    [2,  8000] loss: 1.308
+    [2, 10000] loss: 1.294
+    [2, 12000] loss: 1.266
+    Finished Training
+
+
 5. Test the network on the test data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -242,6 +309,21 @@ Okay, first step. Let us display an image from the test set to get familiar.
     print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 
+
+
+.. image:: /beginner/blitz/images/sphx_glr_cifar10_tutorial_002.png
+    :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    GroundTruth:    cat  ship  ship plane
+
+
 Okay, now let us see what the neural network thinks these examples above are:
 
 
@@ -250,6 +332,11 @@ Okay, now let us see what the neural network thinks these examples above are:
 
 
     outputs = net(images)
+
+
+
+
+
 
 
 The outputs are energies for the 10 classes.
@@ -265,6 +352,18 @@ So, let's get the index of the highest energy:
 
     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
                                   for j in range(4)))
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Predicted:    cat   car  ship plane
 
 
 The results seem pretty good.
@@ -288,6 +387,18 @@ Let us look at how the network performs on the whole dataset.
 
     print('Accuracy of the network on the 10000 test images: %d %%' % (
         100 * correct / total))
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Accuracy of the network on the 10000 test images: 55 %
 
 
 That looks waaay better than chance, which is 10% accuracy (randomly picking
@@ -321,6 +432,27 @@ not perform well:
             classes[i], 100 * class_correct[i] / class_total[i]))
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Accuracy of plane : 59 %
+    Accuracy of   car : 66 %
+    Accuracy of  bird : 26 %
+    Accuracy of   cat : 30 %
+    Accuracy of  deer : 58 %
+    Accuracy of   dog : 64 %
+    Accuracy of  frog : 63 %
+    Accuracy of horse : 49 %
+    Accuracy of  ship : 66 %
+    Accuracy of truck : 71 %
+
+
 Okay, so what next?
 
 How do we run these neural networks on the GPU?
@@ -343,6 +475,18 @@ CUDA available:
     # Assume that we are on a CUDA machine, then this should print a CUDA device:
 
     print(device)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    cpu
 
 
 The rest of this section assumes that `device` is a CUDA device.
@@ -400,7 +544,7 @@ Where do I go next?
 .. _Chat with other users on Slack: http://pytorch.slack.com/messages/beginner/
 
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+**Total running time of the script:** ( 1 minutes  57.654 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_cifar10_tutorial.py:

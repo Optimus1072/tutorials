@@ -44,6 +44,11 @@ argument that is a tensor of matching shape.
     import torch
 
 
+
+
+
+
+
 Create a tensor and set requires_grad=True to track computation with it
 
 
@@ -55,9 +60,35 @@ Create a tensor and set requires_grad=True to track computation with it
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[1., 1.],
+            [1., 1.]], requires_grad=True)
+
+
+
 .. code-block:: python
 
     print(x.data)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[1., 1.],
+            [1., 1.]])
 
 
 
@@ -67,10 +98,34 @@ Create a tensor and set requires_grad=True to track computation with it
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    None
+
+
+
 .. code-block:: python
 
 
     print(x.grad_fn)  # we've created x ourselves
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    None
 
 
 Do an operation of x:
@@ -84,6 +139,19 @@ Do an operation of x:
     print(y)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[3., 3.],
+            [3., 3.]], grad_fn=<AddBackward>)
+
+
 y was created as a result of an operation,
 so it has a grad_fn
 
@@ -92,6 +160,18 @@ so it has a grad_fn
 .. code-block:: python
 
     print(y.grad_fn)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    <AddBackward object at 0x7f412cbf4208>
 
 
 More operations on y:
@@ -105,6 +185,19 @@ More operations on y:
     out = z.mean()
 
     print(z, out)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[27., 27.],
+            [27., 27.]], grad_fn=<MulBackward>) tensor(27., grad_fn=<MeanBackward1>)
 
 
 ``.requires_grad_( ... )`` changes an existing Tensor's ``requires_grad``
@@ -123,6 +216,20 @@ flag in-place. The input flag defaults to ``True`` if not given.
     print(b.grad_fn)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    False
+    True
+    <SumBackward0 object at 0x7f40f2146ac8>
+
+
 Gradients
 ---------
 
@@ -136,6 +243,19 @@ let's backprop now and print gradients d(out)/dx
     out.backward()
     print(x.grad)
 
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[4.5000, 4.5000],
+            [4.5000, 4.5000]])
 
 
 By default, gradient computation flushes all the internal buffers
@@ -156,10 +276,36 @@ during the first pass.
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[1., 1.],
+            [1., 1.]])
+
+
+
 .. code-block:: python
 
     z = y * y
     print(z)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[9., 9.],
+            [9., 9.]], grad_fn=<ThMulBackward>)
 
 
 just backprop random gradients
@@ -178,6 +324,19 @@ just backprop random gradients
     print(x.grad)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[1.6041, 1.0296],
+            [0.6647, 0.9465]])
+
+
 You can also stops autograd from tracking history on Tensors
 with requires_grad=True by wrapping the code block in
 ``with torch.no_grad():``
@@ -192,7 +351,21 @@ with requires_grad=True by wrapping the code block in
     with torch.no_grad():
     	print((x ** 2).requires_grad)
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    True
+    True
+    False
+
+
+**Total running time of the script:** ( 0 minutes  0.006 seconds)
 
 
 .. _sphx_glr_download_beginner_former_torchies_autograd_tutorial.py:
