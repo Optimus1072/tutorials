@@ -1,0 +1,1166 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to the Hybrid Frontend &mdash; PyTorch Tutorials 0.5.0a0+aebf3b4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/pytorch_theme.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Finetuning Torchvision Models" href="../finetuning_torchvision_models_tutorial.html" />
+    <link rel="prev" title="Learning Hybrid Frontend Syntax Through Example" href="learning_hybrid_frontend_through_example_tutorial.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PyTorch Tutorials
+          
+
+          
+            
+            <img src="../../_static/pytorch-logo-dark.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.0a0+aebf3b4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Beginner Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning_60min_blitz.html">Deep Learning with PyTorch: A 60 Minute Blitz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blitz/tensor_tutorial.html">What is PyTorch?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/tensor_tutorial.html#getting-started">Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/tensor_tutorial.html#tensors">Tensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/tensor_tutorial.html#operations">Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/tensor_tutorial.html#numpy-bridge">NumPy Bridge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/tensor_tutorial.html#converting-a-torch-tensor-to-a-numpy-array">Converting a Torch Tensor to a NumPy Array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/tensor_tutorial.html#converting-numpy-array-to-torch-tensor">Converting NumPy Array to Torch Tensor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/tensor_tutorial.html#cuda-tensors">CUDA Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blitz/autograd_tutorial.html">Autograd: automatic differentiation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/autograd_tutorial.html#tensor">Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/autograd_tutorial.html#gradients">Gradients</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blitz/neural_networks_tutorial.html">Neural Networks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/neural_networks_tutorial.html#define-the-network">Define the network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/neural_networks_tutorial.html#loss-function">Loss Function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/neural_networks_tutorial.html#backprop">Backprop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/neural_networks_tutorial.html#update-the-weights">Update the weights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blitz/cifar10_tutorial.html">Training a classifier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/cifar10_tutorial.html#what-about-data">What about data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/cifar10_tutorial.html#training-an-image-classifier">Training an image classifier</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/cifar10_tutorial.html#loading-and-normalizing-cifar10">1. Loading and normalizing CIFAR10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/cifar10_tutorial.html#define-a-convolution-neural-network">2. Define a Convolution Neural Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/cifar10_tutorial.html#define-a-loss-function-and-optimizer">3. Define a Loss function and optimizer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/cifar10_tutorial.html#train-the-network">4. Train the network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/cifar10_tutorial.html#test-the-network-on-the-test-data">5. Test the network on the test data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/cifar10_tutorial.html#training-on-gpu">Training on GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/cifar10_tutorial.html#training-on-multiple-gpus">Training on multiple GPUs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/cifar10_tutorial.html#where-do-i-go-next">Where do I go next?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blitz/data_parallel_tutorial.html">Optional: Data Parallelism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#imports-and-parameters">Imports and parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#dummy-dataset">Dummy DataSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#simple-model">Simple Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#create-model-and-dataparallel">Create Model and DataParallel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#run-the-model">Run the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#results">Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#gpus">2 GPUs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#id1">3 GPUs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#id2">8 GPUs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blitz/data_parallel_tutorial.html#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../former_torchies_tutorial.html">PyTorch for former Torch users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../former_torchies/tensor_tutorial.html">Tensors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#inplace-out-of-place">Inplace / Out-of-place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#zero-indexing">Zero Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#no-camel-casing">No camel casing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#numpy-bridge">Numpy Bridge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#converting-torch-tensor-to-numpy-array">Converting torch Tensor to numpy Array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#converting-numpy-array-to-torch-tensor">Converting numpy Array to torch Tensor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/tensor_tutorial.html#cuda-tensors">CUDA Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../former_torchies/autograd_tutorial.html">Autograd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/autograd_tutorial.html#tensors-that-track-history">Tensors that track history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/autograd_tutorial.html#gradients">Gradients</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../former_torchies/nn_tutorial.html">nn package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/nn_tutorial.html#example-1-convnet">Example 1: ConvNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/nn_tutorial.html#forward-and-backward-function-hooks">Forward and Backward Function Hooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/nn_tutorial.html#example-2-recurrent-net">Example 2: Recurrent Net</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../former_torchies/parallelism_tutorial.html">Multi-GPU examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/parallelism_tutorial.html#dataparallel">DataParallel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../former_torchies/parallelism_tutorial.html#part-of-the-model-on-cpu-and-part-on-the-gpu">Part of the model on CPU and part on the GPU</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch_with_examples.html">Learning PyTorch with Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_with_examples.html#tensors">Tensors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#warm-up-numpy">Warm-up: numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-tensors">PyTorch: Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_with_examples.html#autograd">Autograd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-tensors-and-autograd">PyTorch: Tensors and autograd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-defining-new-autograd-functions">PyTorch: Defining new autograd functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#tensorflow-static-graphs">TensorFlow: Static Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_with_examples.html#nn-module"><cite>nn</cite> module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-nn">PyTorch: nn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-optim">PyTorch: optim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-custom-nn-modules">PyTorch: Custom nn Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#pytorch-control-flow-weight-sharing">PyTorch: Control Flow + Weight Sharing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_with_examples.html#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#id1">Tensors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples_tensor/two_layer_net_numpy.html">Warm-up: numpy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_tensor/two_layer_net_tensor.html">PyTorch: Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#id2">Autograd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples_autograd/two_layer_net_autograd.html">PyTorch: Tensors and autograd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_autograd/two_layer_net_custom_function.html">PyTorch: Defining new autograd functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_autograd/tf_two_layer_net.html">TensorFlow: Static Graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_with_examples.html#id3"><cite>nn</cite> module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples_nn/two_layer_net_nn.html">PyTorch: nn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_nn/two_layer_net_optim.html">PyTorch: optim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_nn/two_layer_net_module.html">PyTorch: Custom nn Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples_nn/dynamic_net.html">PyTorch: Control Flow + Weight Sharing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../transfer_learning_tutorial.html">Transfer Learning tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../transfer_learning_tutorial.html#load-data">Load Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transfer_learning_tutorial.html#visualize-a-few-images">Visualize a few images</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer_learning_tutorial.html#training-the-model">Training the model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transfer_learning_tutorial.html#visualizing-the-model-predictions">Visualizing the model predictions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer_learning_tutorial.html#finetuning-the-convnet">Finetuning the convnet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transfer_learning_tutorial.html#train-and-evaluate">Train and evaluate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../transfer_learning_tutorial.html#convnet-as-fixed-feature-extractor">ConvNet as fixed feature extractor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../transfer_learning_tutorial.html#id1">Train and evaluate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_loading_tutorial.html">Data Loading and Processing Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_loading_tutorial.html#dataset-class">Dataset class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_loading_tutorial.html#transforms">Transforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_loading_tutorial.html#compose-transforms">Compose transforms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_loading_tutorial.html#iterating-through-the-dataset">Iterating through the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_loading_tutorial.html#afterword-torchvision">Afterword: torchvision</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deep_learning_nlp_tutorial.html">Deep Learning for NLP with Pytorch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/pytorch_tutorial.html">Introduction to PyTorch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/pytorch_tutorial.html#introduction-to-torch-s-tensor-library">Introduction to Torch’s tensor library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/pytorch_tutorial.html#creating-tensors">Creating Tensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/pytorch_tutorial.html#operations-with-tensors">Operations with Tensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/pytorch_tutorial.html#reshaping-tensors">Reshaping Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/pytorch_tutorial.html#computation-graphs-and-automatic-differentiation">Computation Graphs and Automatic Differentiation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/deep_learning_tutorial.html">Deep Learning with PyTorch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#deep-learning-building-blocks-affine-maps-non-linearities-and-objectives">Deep Learning Building Blocks: Affine maps, non-linearities and objectives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#affine-maps">Affine Maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#non-linearities">Non-Linearities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#softmax-and-probabilities">Softmax and Probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#objective-functions">Objective Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#optimization-and-training">Optimization and Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#creating-network-components-in-pytorch">Creating Network Components in PyTorch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../nlp/deep_learning_tutorial.html#example-logistic-regression-bag-of-words-classifier">Example: Logistic Regression Bag-of-Words classifier</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/word_embeddings_tutorial.html">Word Embeddings: Encoding Lexical Semantics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/word_embeddings_tutorial.html#getting-dense-word-embeddings">Getting Dense Word Embeddings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/word_embeddings_tutorial.html#word-embeddings-in-pytorch">Word Embeddings in Pytorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/word_embeddings_tutorial.html#an-example-n-gram-language-modeling">An Example: N-Gram Language Modeling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/word_embeddings_tutorial.html#exercise-computing-word-embeddings-continuous-bag-of-words">Exercise: Computing Word Embeddings: Continuous Bag-of-Words</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/sequence_models_tutorial.html">Sequence Models and Long-Short Term Memory Networks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/sequence_models_tutorial.html#lstm-s-in-pytorch">LSTM’s in Pytorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/sequence_models_tutorial.html#example-an-lstm-for-part-of-speech-tagging">Example: An LSTM for Part-of-Speech Tagging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/sequence_models_tutorial.html#exercise-augmenting-the-lstm-part-of-speech-tagger-with-character-level-features">Exercise: Augmenting the LSTM part-of-speech tagger with character-level features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/advanced_tutorial.html">Advanced: Making Dynamic Decisions and the Bi-LSTM CRF</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/advanced_tutorial.html#dynamic-versus-static-deep-learning-toolkits">Dynamic versus Static Deep Learning Toolkits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/advanced_tutorial.html#bi-lstm-conditional-random-field-discussion">Bi-LSTM Conditional Random Field Discussion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/advanced_tutorial.html#implementation-notes">Implementation Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nlp/advanced_tutorial.html#exercise-a-new-loss-function-for-discriminative-tagging">Exercise: A new loss function for discriminative tagging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../hybrid_frontend_tutorial.html">Hybrid Frontend Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html">Learning Hybrid Frontend Syntax Through Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#hybrid-frontend-information">Hybrid Frontend Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#motivating-example">Motivating Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#part-1-tracing-a-pure-python-function">Part 1 - Tracing a pure python function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#part-2-scripting-a-pure-python-function">Part 2 - Scripting a pure python function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#part-3-tracing-a-nn-module">Part 3 - Tracing a nn.Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#part-4-scripting-a-nn-module">Part 4 - Scripting a nn.Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#top-level-module">Top-Level Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#running-the-model">Running the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="learning_hybrid_frontend_through_example_tutorial.html#tracing-the-top-level-model">Tracing the Top-Level Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to the Hybrid Frontend</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eager-mode">Eager Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graph-mode">Graph Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jit-compiler">JIT Compiler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tracing-mode">Tracing Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#script-mode">Script Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#k-nearest-neighbors-example">k-Nearest Neighbors Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dataset">Dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#algorithm">Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#on-to-the-code">On to the Code!</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#handle-data">Handle data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implement-k-nn-functions">Implement k-NN functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-testing">Run Testing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html">Finetuning Torchvision Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#helper-functions">Helper Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#model-training-and-validation-code">Model Training and Validation Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#set-model-parameters-requires-grad-attribute">Set Model Parameters’ .requires_grad attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#initialize-and-reshape-the-networks">Initialize and Reshape the Networks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#resnet">Resnet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#alexnet">Alexnet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#vgg">VGG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#squeezenet">Squeezenet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#densenet">Densenet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#inception-v3">Inception v3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#load-data">Load Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#create-the-optimizer">Create the Optimizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#run-training-and-validation-step">Run Training and Validation Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#comparison-with-model-trained-from-scratch">Comparison with Model Trained from Scratch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#final-thoughts-and-where-to-go-next">Final Thoughts and Where to Go Next</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Intermediate Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html">Classifying Names with a Character-Level RNN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#preparing-the-data">Preparing the Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#turning-names-into-tensors">Turning Names into Tensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#creating-the-network">Creating the Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#training">Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#preparing-for-training">Preparing for Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#training-the-network">Training the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#plotting-the-results">Plotting the Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#evaluating-the-results">Evaluating the Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#running-on-user-input">Running on User Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_classification_tutorial.html#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html">Generating Names with a Character-Level RNN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#preparing-the-data">Preparing the Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#creating-the-network">Creating the Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#training">Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#preparing-for-training">Preparing for Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#training-the-network">Training the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#plotting-the-losses">Plotting the Losses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#sampling-the-network">Sampling the Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/char_rnn_generation_tutorial.html#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html">Translation with a Sequence to Sequence Network and Attention</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#loading-data-files">Loading data files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#the-seq2seq-model">The Seq2Seq Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#the-encoder">The Encoder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#the-decoder">The Decoder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#simple-decoder">Simple Decoder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#attention-decoder">Attention Decoder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#training">Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#preparing-training-data">Preparing Training Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#training-the-model">Training the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#plotting-results">Plotting results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#evaluation">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#training-and-evaluating">Training and Evaluating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#visualizing-attention">Visualizing Attention</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/seq2seq_translation_tutorial.html#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html">Reinforcement Learning (DQN) tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#replay-memory">Replay Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#dqn-algorithm">DQN algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#q-network">Q-network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#input-extraction">Input extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#training">Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#hyperparameters-and-utilities">Hyperparameters and utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/reinforcement_q_learning.html#training-loop">Training loop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/dist_tuto.html">Writing Distributed Applications with PyTorch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/dist_tuto.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/dist_tuto.html#point-to-point-communication">Point-to-Point Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/dist_tuto.html#collective-communication">Collective Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/dist_tuto.html#distributed-training">Distributed Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/dist_tuto.html#our-own-ring-allreduce">Our Own Ring-Allreduce</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/dist_tuto.html#advanced-topics">Advanced Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/dist_tuto.html#communication-backends">Communication Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intermediate/dist_tuto.html#initialization-methods">Initialization Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../intermediate/spatial_transformer_tutorial.html">Spatial Transformer Networks Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/spatial_transformer_tutorial.html#loading-the-data">Loading the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/spatial_transformer_tutorial.html#depicting-spatial-transformer-networks">Depicting spatial transformer networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/spatial_transformer_tutorial.html#training-the-model">Training the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intermediate/spatial_transformer_tutorial.html#visualizing-the-stn-results">Visualizing the STN results</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Advanced Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/neural_style_tutorial.html">Neural Transfer Using PyTorch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#underlying-principle">Underlying Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#importing-packages-and-selecting-a-device">Importing Packages and Selecting a Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#loading-the-images">Loading the Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#loss-functions">Loss Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#content-loss">Content Loss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#style-loss">Style Loss</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#importing-the-model">Importing the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#gradient-descent">Gradient Descent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html">Creating extensions using numpy and scipy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html#parameter-less-example">Parameter-less example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html#parametrized-example">Parametrized example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html">Transfering a model from PyTorch to Caffe2 and Mobile using ONNX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html#transfering-srresnet-using-onnx">Transfering SRResNet using ONNX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html#running-the-model-on-mobile-devices">Running the model on mobile devices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/cpp_extension.html">Custom C++ and CUDA Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/cpp_extension.html#motivation-and-example">Motivation and Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/cpp_extension.html#writing-a-c-extension">Writing a C++ Extension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#building-with-setuptools">Building with <code class="docutils literal notranslate"><span class="pre">setuptools</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#writing-the-c-op">Writing the C++ Op</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../advanced/cpp_extension.html#forward-pass">Forward Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../advanced/cpp_extension.html#backward-pass">Backward Pass</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#binding-to-python">Binding to Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#using-your-extension">Using Your Extension</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../advanced/cpp_extension.html#performance-comparison">Performance Comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../advanced/cpp_extension.html#performance-on-gpu-devices">Performance on GPU Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#jit-compiling-extensions">JIT Compiling Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/cpp_extension.html#writing-a-mixed-c-cuda-extension">Writing a Mixed C++/CUDA extension</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../advanced/cpp_extension.html#integrating-a-c-cuda-operation-with-pytorch">Integrating a C++/CUDA Operation with PyTorch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../advanced/cpp_extension.html#id2">Performance Comparison</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/cpp_extension.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Installation Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation_guides/local.html">Local Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/linux.html">Linux Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/windows.html">Windows Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/osx.html">OSX Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation_guides/cloud.html">Cloud Installations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/gce.html">Google Compute Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/aws.html">Amazon Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation_guides/microsoft_azure.html">Microsoft Azure</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_basics/abc.html">Abc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_basics/123.html">123</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Applied</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_applied/vision.html">Vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_applied/audio.html">Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_applied/language.html">Language/NLP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch in Depth</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/distributed.html">Distributed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/optimization.html">Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/benchmarking.html">Benchmarking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/custom_collate_functions.html">Custom Collate Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/custom_data_loading.html">Custom Data Loading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/custom_operators.html">Custom Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/graph_mode.html">Graph Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_in_depth/tensor_comprehensions.html">Tensor Comprehensions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Hacking PyTorch</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hacking_pytorch/cpp_extensions.html">CPP Extensions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PyTorch Tutorials</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../hybrid_frontend_tutorial.html">Hybrid Frontend Tutorials</a> &raquo;</li>
+        
+      <li>Introduction to the Hybrid Frontend</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/beginner/hybrid_frontend/introduction_to_hybrid_frontend_tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Click <a class="reference internal" href="#sphx-glr-download-beginner-hybrid-frontend-introduction-to-hybrid-frontend-tutorial-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="introduction-to-the-hybrid-frontend">
+<span id="sphx-glr-beginner-hybrid-frontend-introduction-to-hybrid-frontend-tutorial-py"></span><h1>Introduction to the Hybrid Frontend<a class="headerlink" href="#introduction-to-the-hybrid-frontend" title="Permalink to this headline">¶</a></h1>
+<p><strong>Author:</strong> <a class="reference external" href="https://github.com/MatthewInkawhich">Matthew Inkawhich</a></p>
+<p>In this tutorial, we will experiment with some of the key features of
+the PyTorch hybrid frontend.</p>
+<p>This flexible programming model enables the co-existance and seamless
+interaction between an imperative eager interface designed for
+experimentation and easy debugging, and a declarative graph mode in
+which models can be optimized for performance and exported to
+large-scale production environments.</p>
+<div class="section" id="eager-mode">
+<h2>Eager Mode<a class="headerlink" href="#eager-mode" title="Permalink to this headline">¶</a></h2>
+<p>PyTorch’s eager mode is the familiar PyTorch interface. Eager mode is
+easy because it is simply idiomatic Python. Because of the imperative
+nature of the mode, we can use our favorite Python debugging tools such
+as <code class="docutils literal notranslate"><span class="pre">pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">print</span></code> statements. This mode is designed for rapid
+model prototyping and ambitious research efforts.</p>
+<p>However, it is difficult to optimize models represented in eager mode
+for large-scale production and deployment.</p>
+</div>
+<div class="section" id="graph-mode">
+<h2>Graph Mode<a class="headerlink" href="#graph-mode" title="Permalink to this headline">¶</a></h2>
+<p>The graph mode creates a deferred model representation, which is a
+common methodology in many deep learning frameworks. In graph mode, you
+write a model definition in Python, which is run later on in the Caffe2
+C++ runtime environment. Having a deferred representation has numerous
+benefits, including:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Model simplicity</em>: Model representation is simpler and more restricted</li>
+<li><em>Optimization</em>: We can apply various optimization techniques to create
+more efficient deployable models</li>
+<li><em>Improved performance</em>: We can leverage parallel and out-of-order
+execution, and target highly optimized hardware architectures</li>
+<li><em>Easy export</em>: Exporting a serialized model is a breeze with ONNX</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="workflow" src="../../_images/pytorch_workflow_small.jpg" />
+</div>
+</div>
+<div class="section" id="jit-compiler">
+<h2>JIT Compiler<a class="headerlink" href="#jit-compiler" title="Permalink to this headline">¶</a></h2>
+<p>To accomodate to as many workflows as possible, PyTorch not only
+provides both an eager mode and a graph mode, but a transition mechanism
+between them: <code class="docutils literal notranslate"><span class="pre">torch.jit</span></code>. This enables the use of the newest
+state-of-the-art models from research environments to be deployed and
+exported in demanding production environments without massive code
+re-writes.</p>
+<p>To learn more see <a class="reference external" href="https://pytorch.org/2018/05/02/road-to-1.0.html">this
+letter</a> from the
+PyTorch team.</p>
+<p>There are two separate modes for performing this transition.</p>
+<div class="section" id="tracing-mode">
+<h3>Tracing Mode<a class="headerlink" href="#tracing-mode" title="Permalink to this headline">¶</a></h3>
+<p>Tracing mode is a non-invasive tool which traces your Python module or
+function to create an internal representation that is compiled to graph
+mode. The <code class="docutils literal notranslate"><span class="pre">torch.jit.trace</span></code> function takes your module or function and
+an example data input, and traces the computational steps that the data
+encounters as it progresses through the model.</p>
+<p>An advantage of this approach is that it is an unobtrusive process that
+will work regardless of how your Python code is structured. However,
+because of the way the tracer works, data-dependent control flows (if
+statements, loops) cannot be fully captured. Rather, only the control
+sequence traced using the example input will be recorded.</p>
+</div>
+<div class="section" id="script-mode">
+<h3>Script Mode<a class="headerlink" href="#script-mode" title="Permalink to this headline">¶</a></h3>
+<p>To compile models with data-dependent control flow elements, such as
+RNNs, we simply add a <code class="docutils literal notranslate"><span class="pre">&#64;torch.jit.script</span></code> decorator to our function.
+This annotation lets PyTorch know that the function may contain
+data-dependent control flows. Now, our loops, conditionals, and
+iterative data mutations are handled explicitly.</p>
+<p>The one constraint for users compiling with script mode is that it
+currently only supports a restricted subset of Python. As of now,
+features such as generators, defs, and Python data structures are not
+supported. To remedy this, you can invoke traced modules from script
+modules (and vice-versa), and you can call pure Python functions and
+modules from script modules. However, the operations done in the pure
+Python functions will not be compiled, and will run as-is.</p>
+<p>Regardless of which compilation mode you need, the end result is a
+Python-free model representation which can be optimized and exported.</p>
+</div>
+</div>
+<div class="section" id="k-nearest-neighbors-example">
+<h2>k-Nearest Neighbors Example<a class="headerlink" href="#k-nearest-neighbors-example" title="Permalink to this headline">¶</a></h2>
+<p>To showcase the basics of the hybrid frontend, we will implement a basic
+classification algorithm using a mix of both compilation modes and raw
+Python.</p>
+<div class="section" id="dataset">
+<h3>Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h3>
+<p>We will use the famous <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/iris">Iris
+dataset</a> as our toy
+problem.</p>
+<ul class="simple">
+<li>3 classes of flowers (Iris Setosa, Iris Versicolour, Iris Virginica)</li>
+<li>150 total samples (50 of each class)</li>
+<li>4 features (Sepal length, Sepal width, Petal length, Petal width)</li>
+</ul>
+<div class="figure">
+<img alt="iris" src="../../_images/iris_pic.jpg" />
+</div>
+</div>
+<div class="section" id="algorithm">
+<h3>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h3>
+<p>k-Nearest Neighbors is a relatively simple classification algorithm. It
+is instance-based and lazy, meaning that it uses all training examples
+to model the training data, and delays all computation (model fitting)
+until inference time.</p>
+<div class="figure" id="id1">
+<img alt="knn" src="../../_images/220px-KnnClassification.png" />
+<p class="caption"><span class="caption-text">k-NN visualization</span></p>
+</div>
+<p>The idea is to find the <strong>k</strong> closest training samples to a given test
+instance, and predict the class that has the highest representation in
+this group.</p>
+<p>For example, if k=3, and the k closest training samples are class {2, 1,
+2}, the prediction for the test instance is 2. In the event of a voting
+draw, we reduce k and vote again.</p>
+</div>
+</div>
+<div class="section" id="on-to-the-code">
+<h2>On to the Code!<a class="headerlink" href="#on-to-the-code" title="Permalink to this headline">¶</a></h2>
+<p>Enough talking, let’s get to the code!</p>
+<p>We’ll start by importing some necessities.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch.jit</span> <span class="kn">import</span> <span class="n">script</span><span class="p">,</span> <span class="n">trace</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+<div class="section" id="handle-data">
+<h3>Handle data<a class="headerlink" href="#handle-data" title="Permalink to this headline">¶</a></h3>
+<p>The next step is to download the Iris dataset into <code class="docutils literal notranslate"><span class="pre">data/iris.data</span></code>.
+To get an idea of what the file looks like, we’ll print a few lines.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Download the data from
+<a class="reference external" href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data">here</a>
+and extract it in a <code class="docutils literal notranslate"><span class="pre">data</span></code> directory under the current directory.</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;data/iris.data&quot;</span>
+
+<span class="c1"># Print 10 random lines</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">datafile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cannot open data file: {}. Have you downloaded it yet?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+    <span class="nb">exit</span><span class="p">()</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">datafile</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="c1"># Last line in file is empty, we&#39;ll deal with this later</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[:</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">datafile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Next, we’ll create our dataset, which is a list of lists containing each
+row of the data file (shape=(150,5)).</p>
+<p>In the next step, we will convert this to a torch tensor, so we have to
+convert the string flower species names to float type so that the types
+of all elements are the same. To do this, we define a simple mapping in
+the <code class="docutils literal notranslate"><span class="pre">class_labels</span></code> dictionary.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declare mapping between string class labels and a numeric representation</span>
+<span class="n">class_labels</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Iris-setosa&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Iris-versicolor&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Iris-virginica&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="c1"># Takes a filename with comma separated contents, returns dataset list</span>
+<span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">datafile</span><span class="p">:</span>
+        <span class="c1"># Create dataset list</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+        <span class="c1"># Remove empty lines</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dataset</span> <span class="k">if</span> <span class="n">x</span><span class="p">]</span>
+        <span class="c1"># Convert string label to numeric label</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+                <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">class_labels</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]])</span>
+        <span class="k">return</span> <span class="n">dataset</span>
+
+
+<span class="c1"># Load dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="s2">&quot;data/iris.data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we will declare our <code class="docutils literal notranslate"><span class="pre">train_ratio</span></code> and split the dataset. Notice
+that we cast the <code class="docutils literal notranslate"><span class="pre">train_set</span></code> and <code class="docutils literal notranslate"><span class="pre">test_set</span></code> splits to <em>torch.tensor</em>
+before returning.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ratio of samples used for training</span>
+<span class="n">train_ratio</span> <span class="o">=</span> <span class="o">.</span><span class="mi">70</span>
+
+<span class="c1"># Takes dataset list and a train percent value for splitting data</span>
+<span class="k">def</span> <span class="nf">split_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">train_ratio</span><span class="p">):</span>
+    <span class="c1"># Shuffle data</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="c1"># Calculate number of files in train and test set</span>
+    <span class="n">train_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span> <span class="o">*</span> <span class="n">train_ratio</span><span class="p">)</span>
+    <span class="n">test_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span> <span class="o">-</span> <span class="n">train_len</span><span class="p">)</span>
+    <span class="c1"># Split train and test sets</span>
+    <span class="n">train_set</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:</span><span class="n">train_len</span><span class="p">]</span>
+    <span class="n">test_set</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="o">-</span><span class="n">test_len</span><span class="p">:]</span>
+    <span class="c1"># Convert splits to torch tensor and return</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">train_set</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">test_set</span><span class="p">)</span>
+
+
+<span class="c1"># Split dataset</span>
+<span class="n">train_set</span><span class="p">,</span> <span class="n">test_set</span> <span class="o">=</span> <span class="n">split_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">train_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implement-k-nn-functions">
+<h3>Implement k-NN functions<a class="headerlink" href="#implement-k-nn-functions" title="Permalink to this headline">¶</a></h3>
+<p>The next step is to implement the helper functions that we will use to
+carry out the k-NN algorithm. Because we use torch tensors to operate
+on, we can use the PyTorch JIT compiler to compile our functions to a
+graph representation.</p>
+<div class="section" id="getdistance">
+<h4>getDistance<a class="headerlink" href="#getdistance" title="Permalink to this headline">¶</a></h4>
+<p>The first function that we’ll implement is <code class="docutils literal notranslate"><span class="pre">getDistance</span></code>, which is how
+we will calculate the distance between a <code class="docutils literal notranslate"><span class="pre">test_instance</span></code> and a
+<code class="docutils literal notranslate"><span class="pre">train_instance</span></code>. Because our features are all real numbers, we will
+use Euclidean distance:</p>
+<div class="math notranslate nohighlight">
+\[distance = \sqrt{(train[0] - test[0])^2 + (train[1] - test[1])^2 + \ldots +  (train[n] - test[n])^2}\]</div>
+<hr class="docutils" />
+<p><strong>Trace mode</strong></p>
+<p>Because this function involves sequential torch tensor operations, with
+no data-dependent control flows, we can use the <strong>trace</strong> function to
+compile it to a graph representation.</p>
+<p>Notice that to trace a function, you must first declare the traced
+version of the function (<code class="docutils literal notranslate"><span class="pre">getDistance_traced</span></code>) using the
+<code class="docutils literal notranslate"><span class="pre">torch.jit.trace</span></code> function. Notice that the <code class="docutils literal notranslate"><span class="pre">trace</span></code> function is a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Currying">Curried function</a>. For us
+this means that calling it requires two arguments, each surrounded by
+its own set of parenthesis. In the example below, we show that the
+outputs of the non-compiled and compiled functions are identical, and
+use the <code class="docutils literal notranslate"><span class="pre">.graph</span></code> attribute to show the graph in a human readable
+format.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Takes a train_instance and test_instance, and returns a scalar torch</span>
+<span class="c1">#  tensor containing the distance value</span>
+<span class="k">def</span> <span class="nf">getDistance</span><span class="p">(</span><span class="n">train_instance</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">):</span>
+    <span class="c1"># Element wise subtraction; disregard last element (class)</span>
+    <span class="c1">#diff = torch.sub(train_instance[:4], test_instance[:4])</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">train_instance</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">-</span> <span class="n">test_instance</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="c1"># Square each element of the distance tensor</span>
+    <span class="c1">#sqrs = torch.pow(diff, torch.tensor(2.0))</span>
+    <span class="n">sqrs</span> <span class="o">=</span> <span class="n">diff</span> <span class="o">**</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+    <span class="c1"># Sum all elements in sqrs tensor</span>
+    <span class="n">sumsqrs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">sqrs</span><span class="p">)</span>
+    <span class="c1"># Take square root of sumsqrs to obtain distance</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sumsqrs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distance</span>
+
+
+<span class="c1">########## Example ##########</span>
+<span class="c1"># Non-compiled</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Euclidean distance between train_set[0] and train_set[1]:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;train_set[0]:&quot;</span><span class="p">,</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;train_set[1]:&quot;</span><span class="p">,</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="n">getDistance</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Non-compiled output:&quot;</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+
+<span class="c1"># Compiled</span>
+<span class="n">getDistance_traced</span> <span class="o">=</span> <span class="n">trace</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">1</span><span class="p">])(</span><span class="n">getDistance</span><span class="p">)</span>
+<span class="n">distance_traced</span> <span class="o">=</span> <span class="n">getDistance_traced</span><span class="p">(</span><span class="n">train_set</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Compiled output:&quot;</span><span class="p">,</span> <span class="n">distance_traced</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;getDistance_traced.graph:&quot;</span><span class="p">,</span> <span class="n">getDistance_traced</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getsortedlabels">
+<h4>getSortedLabels<a class="headerlink" href="#getsortedlabels" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">getSortedLabels</span></code> function takes two parallel tensors
+(<code class="docutils literal notranslate"><span class="pre">distances</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">labels</span></code>) of length <em>train_instances</em> which contain
+the distances between train instances and a given test instance, and the
+corresponding class labels. The <code class="docutils literal notranslate"><span class="pre">distances</span></code> are sorted first, and we
+reorder the <code class="docutils literal notranslate"><span class="pre">labels</span></code> tensor according to the index changes.</p>
+<hr class="docutils" />
+<p><strong>Trace mode</strong></p>
+<p>Once again, since this function is simply made up of sequential torch
+operations, we can use <strong>trace</strong> to compile it. Notice that we must use
+a scalar tensor for <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Takes parallel distances and labels tensors and returns the sorted labels</span>
+<span class="k">def</span> <span class="nf">getSortedLabels</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="c1"># Sort distances</span>
+    <span class="n">sorted_dists</span><span class="p">,</span> <span class="n">indices</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+    <span class="c1"># Reorder labels according to sorted indices</span>
+    <span class="n">sorted_labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">indices</span><span class="p">)</span>
+    <span class="c1"># Return top-k sorted_labels</span>
+    <span class="k">return</span> <span class="n">sorted_labels</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span>
+
+
+<span class="c1">########## Example ##########</span>
+<span class="c1"># Non-compiled</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sorted labels example:&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sorted_labels</span> <span class="o">=</span> <span class="n">getSortedLabels</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Non-compiled output:&quot;</span><span class="p">,</span> <span class="n">sorted_labels</span><span class="p">)</span>
+
+<span class="c1"># Compiled</span>
+<span class="n">getSortedLabels_traced</span> <span class="o">=</span> <span class="n">trace</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">k</span><span class="p">)(</span><span class="n">getSortedLabels</span><span class="p">)</span>
+<span class="n">sorted_labels_traced</span> <span class="o">=</span> <span class="n">getSortedLabels_traced</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">ls</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Compiled output:&quot;</span><span class="p">,</span> <span class="n">sorted_labels_traced</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;getSortedLabels_traced.graph:&quot;</span><span class="p">,</span> <span class="n">getSortedLabels_traced</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getneighbors">
+<h4>getNeighbors<a class="headerlink" href="#getneighbors" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">getNeighbors</span></code> function takes a <code class="docutils literal notranslate"><span class="pre">train_set</span></code>, a
+<code class="docutils literal notranslate"><span class="pre">test_instance</span></code>, an empty <code class="docutils literal notranslate"><span class="pre">distances</span></code> tensor, an empty <code class="docutils literal notranslate"><span class="pre">labels</span></code>
+tensor, and a <code class="docutils literal notranslate"><span class="pre">k</span></code> value. The <code class="docutils literal notranslate"><span class="pre">distances</span></code> and <code class="docutils literal notranslate"><span class="pre">labels</span></code> tensors must
+have same length as <code class="docutils literal notranslate"><span class="pre">train_set</span></code>. It returns a list of the sorted
+<em>k-nearest</em> neighbors (as class labels) to the <code class="docutils literal notranslate"><span class="pre">test_instance</span></code>. It
+does this by iterating over every instance in the <code class="docutils literal notranslate"><span class="pre">train_set</span></code>,
+recording the distance between the train instance and the
+<code class="docutils literal notranslate"><span class="pre">test_instance</span></code>, and using our <code class="docutils literal notranslate"><span class="pre">getSortedLabels</span></code> function to sort
+the corresbonding labels based on these distances.</p>
+<hr class="docutils" />
+<p><strong>Script mode</strong></p>
+<p>Notice that this function contains a data-dependent control flow (our
+<em>for</em> loop depends on the data size). Because of this, we must compile
+with <strong>script</strong> mode. We indicate the use of this mode by adding a
+<code class="docutils literal notranslate"><span class="pre">&#64;script</span></code> decorator. Note that we can call our traced
+<code class="docutils literal notranslate"><span class="pre">getDistance_traced</span></code>, and <code class="docutils literal notranslate"><span class="pre">getSortedLabels_traced</span></code> functions from
+our script function.</p>
+<p>Finally, you may be wondering why we use the <code class="docutils literal notranslate"><span class="pre">addEntries</span></code> function to
+add to our <code class="docutils literal notranslate"><span class="pre">distances</span></code> and <code class="docutils literal notranslate"><span class="pre">labels</span></code> tensors instead of simply:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span>
+<span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
+</pre></div>
+</div>
+<p>Remember that only a subset of Python is supported in <strong>script</strong> mode.
+One requirement is that the only expressions allowed on the left side of
+an assignment operator (=) are variable names and starred expressions.
+So, one way to circumvent this is to implement pure Python helper
+functions such as <code class="docutils literal notranslate"><span class="pre">addEntries</span></code>.</p>
+<p>Also, notice in the graph output that the loop is captured
+(<code class="docutils literal notranslate"><span class="pre">prim::Loop</span></code>). The <strong>script</strong> mode enables us to convert the Python
+AST directly to graph mode, rather than tracing an example input through
+the control flow and simply capturing the unrolled loop.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add elements to distances and labels tensors at index i</span>
+<span class="k">def</span> <span class="nf">addEntries</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span>
+
+<span class="c1"># Returns k-nearest neighbors of a train_set to a test_instance</span>
+<span class="nd">@script</span>
+<span class="k">def</span> <span class="nf">getNeighbors</span><span class="p">(</span><span class="n">train_set</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="c1"># Data-dependent control flow</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_set</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)):</span>
+        <span class="n">train_instance</span> <span class="o">=</span> <span class="n">train_set</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="c1"># Calculate Euclidean distance using traced function</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">getDistance_traced</span><span class="p">(</span><span class="n">train_instance</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">)</span>
+        <span class="c1"># Extract label</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">train_instance</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># Call Python function to add entries at index i</span>
+        <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">addEntries</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+    <span class="c1"># Call traced function to return a labels tensor sorted by distance to the test_instance</span>
+    <span class="n">sorted_labels</span> <span class="o">=</span> <span class="n">getSortedLabels_traced</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="c1"># Take top k</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="n">sorted_labels</span><span class="p">[:</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">neighbors</span>
+
+
+<span class="c1">########## Example ##########</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;getNeighbors example:&quot;</span><span class="p">)</span>
+<span class="n">small_train_set</span> <span class="o">=</span> <span class="n">train_set</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">small_train_set</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">small_train_set</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+<span class="n">neighbors</span> <span class="o">=</span> <span class="n">getNeighbors</span><span class="p">(</span><span class="n">small_train_set</span><span class="p">,</span> <span class="n">train_set</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;output:&quot;</span><span class="p">,</span> <span class="n">neighbors</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;getNeighbors.graph:&quot;</span><span class="p">,</span> <span class="n">getNeighbors</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getprediction">
+<h4>getPrediction<a class="headerlink" href="#getprediction" title="Permalink to this headline">¶</a></h4>
+<p>Our final function takes the top k neighbors tensor and returns a final
+prediction. The class that has the most representation in the neighbors
+tensor is the one chosen for the final classification. In the case of a
+draw, the element with the lowest index (the closest neighbor) is
+chosen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pure python</span>
+<span class="k">def</span> <span class="nf">getPrediction</span><span class="p">(</span><span class="n">neighbors</span><span class="p">):</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">))</span>
+
+
+<span class="c1">########## Example ##########</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;getPrediction example:&quot;</span><span class="p">)</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">n3</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;n1:&quot;</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">pred:&quot;</span><span class="p">,</span> <span class="n">getPrediction</span><span class="p">(</span><span class="n">n1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;n2:&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">pred:&quot;</span><span class="p">,</span> <span class="n">getPrediction</span><span class="p">(</span><span class="n">n2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;n3:&quot;</span><span class="p">,</span> <span class="n">n3</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">pred:&quot;</span><span class="p">,</span> <span class="n">getPrediction</span><span class="p">(</span><span class="n">n3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run-testing">
+<h3>Run Testing<a class="headerlink" href="#run-testing" title="Permalink to this headline">¶</a></h3>
+<p>Now it is time to use our functions to test the algorithm on our test
+split!</p>
+<p>With the default values of <code class="docutils literal notranslate"><span class="pre">k</span></code> = 3 and <code class="docutils literal notranslate"><span class="pre">train_ratio</span></code> = .70, you can
+expect an accuracy in the mid to high 90s. Not bad for an algorithm this
+simple!</p>
+<p>Feel free to tinker with these parameters and see how the results
+change.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize k</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Initialize counts for accuracy</span>
+<span class="n">total_count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">correct_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Iterate over every instance in the test_set</span>
+<span class="k">for</span> <span class="n">test_instance</span> <span class="ow">in</span> <span class="n">test_set</span><span class="p">:</span>
+    <span class="n">total_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Record ground truth label</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">test_instance</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1"># Initialize distances and labels parallel tensors</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">train_set</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">train_set</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+    <span class="c1"># Get neighbors</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="n">getNeighbors</span><span class="p">(</span><span class="n">train_set</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">,</span> <span class="n">distances</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="c1"># Obtain final prediction</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">getPrediction</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span>
+    <span class="c1"># Check if the prediction matches the ground truth label</span>
+    <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="n">pred</span><span class="p">:</span>
+        <span class="n">correct_count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: {}/{} = {:.2f}%&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">correct_count</span><span class="p">,</span> <span class="n">total_count</span><span class="p">,</span> <span class="p">(</span><span class="n">correct_count</span><span class="o">/</span><span class="n">total_count</span><span class="p">)</span><span class="o">*</span><span class="mf">100.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-hybrid-frontend-introduction-to-hybrid-frontend-tutorial-py">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/introduction_to_hybrid_frontend_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">introduction_to_hybrid_frontend_tutorial.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/introduction_to_hybrid_frontend_tutorial.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">introduction_to_hybrid_frontend_tutorial.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../finetuning_torchvision_models_tutorial.html" class="btn btn-neutral float-right" title="Finetuning Torchvision Models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="learning_hybrid_frontend_through_example_tutorial.html" class="btn btn-neutral" title="Learning Hybrid Frontend Syntax Through Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PyTorch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.5.0a0+aebf3b4',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90545585-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
