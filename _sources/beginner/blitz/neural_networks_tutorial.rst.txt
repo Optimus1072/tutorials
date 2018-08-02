@@ -89,6 +89,24 @@ Let’s define this network:
     print(net)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Net(
+      (conv1): Conv2d(1, 6, kernel_size=(5, 5), stride=(1, 1))
+      (conv2): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
+      (fc1): Linear(in_features=400, out_features=120, bias=True)
+      (fc2): Linear(in_features=120, out_features=84, bias=True)
+      (fc3): Linear(in_features=84, out_features=10, bias=True)
+    )
+
+
 You just have to define the ``forward`` function, and the ``backward``
 function (where gradients are computed) is automatically defined for you
 using ``autograd``.
@@ -106,6 +124,19 @@ The learnable parameters of a model are returned by ``net.parameters()``
     print(params[0].size())  # conv1's .weight
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    10
+    torch.Size([6, 1, 5, 5])
+
+
 Let try a random 32x32 input
 Note: Expected input size to this net(LeNet) is 32x32. To use this net on
 MNIST dataset, please resize the images from the dataset to 32x32.
@@ -120,6 +151,19 @@ MNIST dataset, please resize the images from the dataset to 32x32.
     print(out)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[ 0.0637, -0.1188,  0.0803, -0.0053,  0.0096,  0.0090, -0.0186, -0.0471,
+              0.0803,  0.1024]], grad_fn=<ThAddmmBackward>)
+
+
 Zero the gradient buffers of all parameters and backprops with random
 gradients:
 
@@ -129,6 +173,11 @@ gradients:
 
     net.zero_grad()
     out.backward(torch.randn(1, 10))
+
+
+
+
+
 
 
 .. note::
@@ -195,6 +244,18 @@ For example:
     print(loss)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor(0.4735, grad_fn=<MseLossBackward>)
+
+
 Now, if you follow ``loss`` in the backward direction, using its
 ``.grad_fn`` attribute, you will see a graph of computations that looks
 like this:
@@ -222,6 +283,20 @@ For illustration, let us follow a few steps backward:
     print(loss.grad_fn.next_functions[0][0].next_functions[0][0])  # ReLU
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    <MseLossBackward object at 0x7fb50b931400>
+    <ThAddmmBackward object at 0x7fb50b9314a8>
+    <ExpandBackward object at 0x7fb50b9314a8>
+
+
 Backprop
 --------
 To backpropagate the error all we have to do is to ``loss.backward()``.
@@ -247,6 +322,21 @@ gradients before and after the backward.
 
     print('conv1.bias.grad after backward')
     print(net.conv1.bias.grad)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    conv1.bias.grad before backward
+    tensor([0., 0., 0., 0., 0., 0.])
+    conv1.bias.grad after backward
+    tensor([ 0.0113, -0.0032, -0.0028,  0.0028, -0.0002, -0.0000])
 
 
 Now, we have seen how to use loss functions.
@@ -300,6 +390,11 @@ implements all these methods. Using it is very simple:
 
 
 
+
+
+
+
+
 .. Note::
 
       Observe how gradient buffers had to be manually set to zero using
@@ -307,7 +402,7 @@ implements all these methods. Using it is very simple:
       as explained in `Backprop`_ section.
 
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+**Total running time of the script:** ( 0 minutes  0.008 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_neural_networks_tutorial.py:

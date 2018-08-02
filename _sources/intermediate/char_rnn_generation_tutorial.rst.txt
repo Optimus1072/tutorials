@@ -131,6 +131,19 @@ and end up with a dictionary ``{language: [names ...]}``.
 
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    # categories: 18 ['Scottish', 'French', 'Greek', 'German', 'Vietnamese', 'Italian', 'Arabic', 'Japanese', 'Spanish', 'Chinese', 'Portuguese', 'Russian', 'Dutch', 'English', 'Irish', 'Korean', 'Czech', 'Polish']
+    O'Neal
+
+
 Creating the Network
 ====================
 
@@ -190,6 +203,11 @@ chaos and increase sampling variety.
 
 
 
+
+
+
+
+
 Training
 =========
 Preparing for Training
@@ -214,6 +232,11 @@ First of all, helper functions to get random pairs of (category, line):
         category = randomChoice(all_categories)
         line = randomChoice(category_lines[category])
         return category, line
+
+
+
+
+
 
 
 
@@ -267,6 +290,11 @@ of initial hidden state or some other strategy.
 
 
 
+
+
+
+
+
 For convenience during training we'll make a ``randomTrainingExample``
 function that fetches a random (category, line) pair and turns them into
 the required (category, input, target) tensors.
@@ -284,6 +312,11 @@ the required (category, input, target) tensors.
         input_line_tensor = inputTensor(line)
         target_line_tensor = targetTensor(line)
         return category_tensor, input_line_tensor, target_line_tensor
+
+
+
+
+
 
 
 
@@ -329,6 +362,11 @@ and call backward at the end.
 
 
 
+
+
+
+
+
 To keep track of how long training takes I am adding a
 ``timeSince(timestamp)`` function which returns a human readable string:
 
@@ -347,6 +385,11 @@ To keep track of how long training takes I am adding a
         m = math.floor(s / 60)
         s -= m * 60
         return '%dm %ds' % (m, s)
+
+
+
+
+
 
 
 
@@ -384,6 +427,37 @@ in ``all_losses`` for plotting later.
 
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    0m 15s (5000 5%) 2.7388
+    0m 31s (10000 10%) 2.5838
+    0m 46s (15000 15%) 2.4294
+    1m 2s (20000 20%) 2.2039
+    1m 18s (25000 25%) 2.3755
+    1m 33s (30000 30%) 2.5631
+    1m 49s (35000 35%) 2.1851
+    2m 5s (40000 40%) 1.9052
+    2m 20s (45000 45%) 2.0230
+    2m 36s (50000 50%) 2.8123
+    2m 51s (55000 55%) 2.4112
+    3m 7s (60000 60%) 2.9171
+    3m 23s (65000 65%) 2.5789
+    3m 38s (70000 70%) 2.1598
+    3m 54s (75000 75%) 1.7575
+    4m 10s (80000 80%) 2.7551
+    4m 26s (85000 85%) 2.0064
+    4m 41s (90000 90%) 2.3753
+    4m 56s (95000 95%) 3.7982
+    5m 12s (100000 100%) 2.0965
+
+
 Plotting the Losses
 -------------------
 
@@ -401,6 +475,14 @@ learning:
 
     plt.figure()
     plt.plot(all_losses)
+
+
+
+
+
+.. image:: /intermediate/images/sphx_glr_char_rnn_generation_tutorial_001.png
+    :class: sphx-glr-single-img
+
 
 
 
@@ -472,6 +554,29 @@ feed that in as the next letter, and repeat until the EOS token.
 
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Roshin
+    Uarishin
+    Shakis
+    Gerter
+    Eren
+    Rouren
+    Sanera
+    Parer
+    Allan
+    Chan
+    Han
+    Iun
+
+
 Exercises
 =========
 
@@ -490,7 +595,7 @@ Exercises
 
 
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+**Total running time of the script:** ( 5 minutes  12.391 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_generation_tutorial.py:
