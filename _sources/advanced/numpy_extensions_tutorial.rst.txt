@@ -32,6 +32,11 @@ In this tutorial, we shall go through two tasks:
     from torch.autograd import Function
 
 
+
+
+
+
+
 Parameter-less example
 ----------------------
 
@@ -70,6 +75,11 @@ It is aptly named BadFFTFunction
         return BadFFTFunction()(input)
 
 
+
+
+
+
+
 **Example usage of the created layer:**
 
 
@@ -82,6 +92,35 @@ It is aptly named BadFFTFunction
     print(result)
     result.backward(torch.randn(result.size()))
     print(input)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    tensor([[ 0.9903,  2.1976,  5.9606, 10.5403,  5.6621],
+            [ 3.5805, 10.0639, 10.9629,  6.8819, 10.6533],
+            [15.7993,  3.2722,  0.5628,  7.7455, 17.8693],
+            [ 4.2546, 11.6177,  3.3333,  6.1378,  5.5523],
+            [12.3585,  3.8199,  9.2310,  8.1772, 25.2262],
+            [ 4.2546,  7.3309,  1.7952,  7.1052,  5.5523],
+            [15.7993,  2.8678,  7.1385,  9.7395, 17.8693],
+            [ 3.5805,  7.7653,  4.1090,  4.6577, 10.6533]],
+           grad_fn=<BadFFTFunction>)
+    tensor([[-0.0525,  0.2417,  1.3490,  1.1995,  0.4962, -0.3196,  0.2880, -0.4693],
+            [ 0.4829, -0.3830, -0.2262,  0.1972,  0.4019, -0.0589,  0.6126,  0.1619],
+            [-0.5910,  0.8553, -0.3833,  1.1973, -0.9779, -1.1473,  0.0126,  1.0204],
+            [-0.4743, -0.4434,  1.3500, -2.2600, -1.1167, -1.7695, -1.1681, -1.2146],
+            [-1.3024,  1.5470,  0.4058,  0.2708, -0.3568, -0.4665,  1.7874,  1.2858],
+            [ 0.2556,  0.7085,  0.2103,  1.5135, -0.3097,  0.4890,  0.4674, -0.5782],
+            [-0.3544,  1.1169, -1.9102,  1.4274, -1.1120,  0.1574,  0.6525, -0.1838],
+            [ 0.4600, -1.9472, -0.7459, -2.7941,  2.8721, -1.1255,  1.3129, -1.5549]],
+           requires_grad=True)
 
 
 Parametrized example
@@ -129,7 +168,7 @@ The backward pass computes the gradient wrt the input and the gradient wrt the f
             # the previous line can be expressed equivalently as:
             # grad_input = correlate2d(grad_output, flip(flip(filter.numpy(), axis=0), axis=1), mode='full')
             grad_filter = correlate2d(input.numpy(), grad_output, mode='valid')
-            return torch.from_numpy(grad_input), torch.from_numpy(grad_filter), torch.from_numpy(grad_bias)
+            return torch.from_numpy(grad_input), torch.from_numpy(grad_filter).to(torch.float), torch.from_numpy(grad_bias).to(torch.float)
 
 
     class ScipyConv2d(Module):
@@ -140,6 +179,11 @@ The backward pass computes the gradient wrt the input and the gradient wrt the f
 
         def forward(self, input):
             return ScipyConv2dFunction.apply(input, self.filter, self.bias)
+
+
+
+
+
 
 
 
@@ -159,6 +203,51 @@ The backward pass computes the gradient wrt the input and the gradient wrt the f
     print("Gradient for the input map: ", input.grad)
 
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Filter and bias:  [Parameter containing:
+    tensor([[-0.8750, -0.0062,  0.0478],
+            [-0.4177, -1.2906,  1.7353],
+            [-1.3958, -0.3596,  2.2262]], requires_grad=True), Parameter containing:
+    tensor([[-1.1778]], requires_grad=True)]
+    Output from the convolution:  tensor([[ 0.4800,  1.1790,  2.8635, -0.0179,  1.7100, -1.8472, -6.0018, -3.4419],
+            [ 0.1531,  0.5144,  0.2907, -1.0691,  1.9870, -1.8641, -7.9880, -5.6449],
+            [-2.7882,  0.5024, -0.7725, -0.9194, -0.0095, -5.1696,  0.3983, -4.1882],
+            [-0.2836, -7.7083,  8.1147,  0.8814, -1.3229, -2.5678, -4.7631,  1.4338],
+            [-4.3471,  1.7902,  1.5181, -1.4489, -1.5382,  0.4482,  0.2854,  0.5275],
+            [-3.1206, -0.5112, -3.2561,  3.9909, -1.8490,  1.6252, -1.3456,  0.1536],
+            [-0.9806, -2.4941, -4.1743,  5.5111,  0.4507,  1.5814, -3.8695,  2.0258],
+            [-7.6470, -1.6283,  0.1453,  2.8892,  2.9577, -4.5290, -7.1614,  2.6488]],
+           grad_fn=<ScipyConv2dFunctionBackward>)
+    Gradient for the input map:  tensor([[-0.4654, -0.6445,  0.0165, -0.6669, -0.1564, -0.2854,  1.4313,  0.0060,
+             -0.0779,  0.0012],
+            [ 0.2513, -1.7024,  0.4127,  0.0865, -2.4544,  0.4301,  0.3626,  3.5342,
+             -2.8416,  0.0010],
+            [-0.0035, -2.5124, -1.5109,  3.4014, -3.1085,  0.5194,  4.2322,  3.5650,
+             -2.0816, -1.5207],
+            [ 2.4927, -1.5675, -4.4664,  3.7068,  0.0986, -2.5261,  3.7199,  2.0839,
+              1.8429, -3.6411],
+            [ 1.1171, -1.0854, -7.0343,  7.9309,  3.0841, -2.0078, -3.8287,  6.7908,
+             -5.4237,  0.8390],
+            [ 3.5122, -0.1627, -4.0787,  2.1232,  2.0926, -2.6350, -0.1987,  0.1737,
+             -2.1835,  2.3403],
+            [-0.1404,  2.4040, -2.2406,  1.0666, -0.1469, -0.2436, -0.0664, -0.3359,
+              4.4699, -3.9930],
+            [ 2.9678,  1.5884, -1.1449, -6.7669,  2.6467, -0.7061,  2.1601,  3.2664,
+              2.6710, -4.5032],
+            [ 0.2479,  2.4425, -4.4426,  2.1521,  2.2042, -4.9126,  4.7440,  1.3496,
+             -0.4137, -4.1389],
+            [ 1.4406, -1.1429, -1.2501,  3.6697, -2.9202,  0.0885,  2.5927, -1.4219,
+             -0.9648, -1.7833]])
+
+
 **Check the gradients:**
 
 
@@ -174,7 +263,19 @@ The backward pass computes the gradient wrt the input and the gradient wrt the f
     test = gradcheck(moduleConv, input, eps=1e-6, atol=1e-4)
     print("Are the gradients correct: ", test)
 
-**Total running time of the script:** ( 0 minutes  0.000 seconds)
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Are the gradients correct:  True
+
+
+**Total running time of the script:** ( 0 minutes  0.209 seconds)
 
 
 .. _sphx_glr_download_advanced_numpy_extensions_tutorial.py:

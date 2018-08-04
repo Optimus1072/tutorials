@@ -324,42 +324,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../beginner/finetuning_torchvision_models_tutorial.html#final-thoughts-and-where-to-go-next">Final Thoughts and Where to Go Next</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../beginner/saving_loading_models.html">Saving and Loading Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#example">Example:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#load">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id1">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id2">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id3">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id4">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Intermediate Tutorials</span></p>
 <ul>
@@ -473,6 +437,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../advanced/neural_style_tutorial.html#gradient-descent">Gradient Descent</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html">Creating extensions using numpy and scipy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html#parameter-less-example">Parameter-less example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html#parametrized-example">Parametrized example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html">Transfering a model from PyTorch to Caffe2 and Mobile using ONNX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html#transfering-srresnet-using-onnx">Transfering SRResNet using ONNX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html#running-the-model-on-mobile-devices">Running the model on mobile devices</a></li>
@@ -504,6 +473,45 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/cpp_extension.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html">Saving and Loading Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#example">Example:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#load">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id1">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id2">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id3">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id4">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

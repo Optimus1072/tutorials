@@ -32,7 +32,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Generating Names with a Character-Level RNN" href="char_rnn_generation_tutorial.html" />
-    <link rel="prev" title="Saving and Loading Models" href="../beginner/saving_loading_models.html" /> 
+    <link rel="prev" title="Finetuning Torchvision Models" href="../beginner/finetuning_torchvision_models_tutorial.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -325,42 +325,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../beginner/finetuning_torchvision_models_tutorial.html#final-thoughts-and-where-to-go-next">Final Thoughts and Where to Go Next</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../beginner/saving_loading_models.html">Saving and Loading Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#example">Example:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#load">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id1">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id2">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id3">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id4">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Intermediate Tutorials</span></p>
 <ul class="current">
@@ -474,6 +438,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../advanced/neural_style_tutorial.html#gradient-descent">Gradient Descent</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html">Creating extensions using numpy and scipy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html#parameter-less-example">Parameter-less example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced/numpy_extensions_tutorial.html#parametrized-example">Parametrized example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html">Transfering a model from PyTorch to Caffe2 and Mobile using ONNX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html#transfering-srresnet-using-onnx">Transfering SRResNet using ONNX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/super_resolution_with_caffe2.html#running-the-model-on-mobile-devices">Running the model on mobile devices</a></li>
@@ -505,6 +474,45 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced/cpp_extension.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html">Saving and Loading Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#example">Example:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#load">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id1">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id2">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id3">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id4">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -715,7 +723,7 @@ ASCII).</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;data/names/Scottish.txt&#39;, &#39;data/names/French.txt&#39;, &#39;data/names/Greek.txt&#39;, &#39;data/names/German.txt&#39;, &#39;data/names/Vietnamese.txt&#39;, &#39;data/names/Italian.txt&#39;, &#39;data/names/Arabic.txt&#39;, &#39;data/names/Japanese.txt&#39;, &#39;data/names/Spanish.txt&#39;, &#39;data/names/Chinese.txt&#39;, &#39;data/names/Portuguese.txt&#39;, &#39;data/names/Russian.txt&#39;, &#39;data/names/Dutch.txt&#39;, &#39;data/names/English.txt&#39;, &#39;data/names/Irish.txt&#39;, &#39;data/names/Korean.txt&#39;, &#39;data/names/Czech.txt&#39;, &#39;data/names/Polish.txt&#39;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;data/names/Scottish.txt&#39;, &#39;data/names/Arabic.txt&#39;, &#39;data/names/Portuguese.txt&#39;, &#39;data/names/Dutch.txt&#39;, &#39;data/names/Irish.txt&#39;, &#39;data/names/Czech.txt&#39;, &#39;data/names/German.txt&#39;, &#39;data/names/Japanese.txt&#39;, &#39;data/names/Italian.txt&#39;, &#39;data/names/French.txt&#39;, &#39;data/names/Chinese.txt&#39;, &#39;data/names/Spanish.txt&#39;, &#39;data/names/Russian.txt&#39;, &#39;data/names/Vietnamese.txt&#39;, &#39;data/names/Polish.txt&#39;, &#39;data/names/Greek.txt&#39;, &#39;data/names/English.txt&#39;, &#39;data/names/Korean.txt&#39;]
 Slusarski
 </pre></div>
 </div>
@@ -839,9 +847,9 @@ pre-computing batches of Tensors.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.8130, -2.8194, -2.7628, -2.9646, -2.8127, -2.9052, -2.8504, -2.8176,
-         -2.9751, -2.9458, -2.8965, -2.7958, -2.9453, -2.9869, -2.9098, -3.0214,
-         -2.8494, -3.0101]], grad_fn=&lt;LogSoftmaxBackward&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.8121, -2.8346, -2.9290, -2.8892, -2.9472, -2.9937, -2.9697, -2.8611,
+         -2.9586, -2.9020, -2.8562, -2.8751, -2.8435, -2.8808, -2.9813, -2.8495,
+         -2.9334, -2.7463]], grad_fn=&lt;LogSoftmaxBackward&gt;)
 </pre></div>
 </div>
 <p>As you can see the output is a <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">x</span> <span class="pre">n_categories&gt;</span></code> Tensor, where
@@ -864,7 +872,7 @@ of the greatest value:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(&#39;Greek&#39;, 2)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(&#39;Korean&#39;, 17)
 </pre></div>
 </div>
 <p>We will also want a quick way to get a training example (a name and its
@@ -887,16 +895,16 @@ language):</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = German / line = Sitz
-category = Scottish / line = Hunter
-category = Italian / line = Amatore
-category = Irish / line = O&#39;Brien
-category = Vietnamese / line = Thao
-category = English / line = Woodward
-category = Irish / line = Doyle
-category = Japanese / line = Sakamoto
-category = Italian / line = Trucco
-category = Portuguese / line = Crespo
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Czech / line = Hiorvst
+category = Russian / line = Baraks
+category = Italian / line = Marchesi
+category = Polish / line = Kijek
+category = Scottish / line = Young
+category = Portuguese / line = Gouveia
+category = Russian / line = Tovuu
+category = French / line = Traverse
+category = German / line = Berg
+category = Spanish / line = Zavala
 </pre></div>
 </div>
 </div>
@@ -986,26 +994,26 @@ average of the loss.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 2.3723 Pullen / Polish ✗ (English)
-10000 10% (0m 12s) 1.9337 Kalb / Arabic ✓
-15000 15% (0m 18s) 0.1633 Kashiwagi / Japanese ✓
-20000 20% (0m 25s) 2.4983 Barros / Portuguese ✗ (Spanish)
-25000 25% (0m 31s) 1.5537 Dasios / Arabic ✗ (Greek)
-30000 30% (0m 37s) 2.1532 Toma / Japanese ✗ (Arabic)
-35000 35% (0m 44s) 1.9882 Schermer / German ✗ (Dutch)
-40000 40% (0m 50s) 0.3546 Bokhoven / Dutch ✓
-45000 45% (0m 56s) 2.9162 Fabb / Arabic ✗ (English)
-50000 50% (1m 2s) 0.9754 Shammas / Arabic ✓
-55000 55% (1m 9s) 0.2486 Chweh / Korean ✓
-60000 60% (1m 15s) 2.6275 Bassett / French ✗ (English)
-65000 65% (1m 22s) 1.6748 Mateus / Arabic ✗ (Portuguese)
-70000 70% (1m 28s) 1.1077 Durant / French ✓
-75000 75% (1m 34s) 3.3725 Rahman / Irish ✗ (English)
-80000 80% (1m 41s) 2.2186 Illingworth / Dutch ✗ (English)
-85000 85% (1m 47s) 1.4406 Cao / Chinese ✗ (Vietnamese)
-90000 90% (1m 54s) 0.1262 Kajahara / Japanese ✓
-95000 95% (2m 0s) 4.0526 Meisner / French ✗ (Dutch)
-100000 100% (2m 6s) 3.2475 Novotny / French ✗ (Czech)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 2.8379 Esteves / Greek ✗ (Portuguese)
+10000 10% (0m 12s) 2.7267 Tindall / Irish ✗ (English)
+15000 15% (0m 19s) 2.1182 Meisner / German ✗ (Dutch)
+20000 20% (0m 25s) 0.7888 Telis / Greek ✓
+25000 25% (0m 31s) 1.2991 Gutierrez / Spanish ✓
+30000 30% (0m 38s) 1.4274 Cuan / Chinese ✓
+35000 35% (0m 44s) 1.1355 Terauchi / Italian ✗ (Japanese)
+40000 40% (0m 50s) 0.2625 Charnetsky / Russian ✓
+45000 45% (0m 57s) 2.9322 Pesce / Scottish ✗ (Italian)
+50000 50% (1m 3s) 0.4307 Mak / Chinese ✓
+55000 55% (1m 10s) 2.3200 Havlice / French ✗ (Czech)
+60000 60% (1m 16s) 3.3643 Mcloughlin / Scottish ✗ (English)
+65000 65% (1m 22s) 2.6553 Barrett / French ✗ (English)
+70000 70% (1m 29s) 2.1593 Teoh / Korean ✗ (Chinese)
+75000 75% (1m 35s) 3.9175 Rompay / Czech ✗ (Dutch)
+80000 80% (1m 41s) 0.2544 Pham / Vietnamese ✓
+85000 85% (1m 48s) 0.0326 Chrysanthopoulos / Greek ✓
+90000 90% (1m 54s) 0.0320 Kumasaka / Japanese ✓
+95000 95% (2m 1s) 0.2851 Shibukji / Japanese ✓
+100000 100% (2m 7s) 0.7952 Jeong / Korean ✓
 </pre></div>
 </div>
 </div>
@@ -1102,19 +1110,19 @@ English (perhaps because of overlap with other languages).</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.79) Russian
-(-0.81) Czech
-(-3.08) Polish
+(-0.68) Russian
+(-1.21) Czech
+(-2.36) Polish
 
 &gt; Jackson
-(-1.16) English
-(-1.48) Scottish
-(-1.75) Russian
+(-0.84) English
+(-1.24) Scottish
+(-2.33) Czech
 
 &gt; Satoshi
-(-0.72) Japanese
-(-1.95) Italian
-(-2.24) Polish
+(-1.13) Arabic
+(-1.32) Italian
+(-1.68) Polish
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -1156,7 +1164,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p><strong>Total running time of the script:</strong> ( 2 minutes  13.017 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 2 minutes  14.130 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/char_rnn_classification_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></div>
@@ -1178,7 +1186,7 @@ output of predictions.</p>
         <a href="char_rnn_generation_tutorial.html" class="btn btn-neutral float-right" title="Generating Names with a Character-Level RNN" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../beginner/saving_loading_models.html" class="btn btn-neutral" title="Saving and Loading Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../beginner/finetuning_torchvision_models_tutorial.html" class="btn btn-neutral" title="Finetuning Torchvision Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

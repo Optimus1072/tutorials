@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Transfering a model from PyTorch to Caffe2 and Mobile using ONNX" href="super_resolution_with_caffe2.html" />
+    <link rel="next" title="Creating extensions using numpy and scipy" href="numpy_extensions_tutorial.html" />
     <link rel="prev" title="Spatial Transformer Networks Tutorial" href="../intermediate/spatial_transformer_tutorial.html" /> 
 
   
@@ -325,42 +325,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../beginner/finetuning_torchvision_models_tutorial.html#final-thoughts-and-where-to-go-next">Final Thoughts and Where to Go Next</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../beginner/saving_loading_models.html">Saving and Loading Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#example">Example:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#load">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id1">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id2">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id3">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#id4">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../beginner/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Intermediate Tutorials</span></p>
 <ul>
@@ -474,6 +438,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#gradient-descent">Gradient Descent</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="numpy_extensions_tutorial.html">Creating extensions using numpy and scipy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="numpy_extensions_tutorial.html#parameter-less-example">Parameter-less example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numpy_extensions_tutorial.html#parametrized-example">Parametrized example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="super_resolution_with_caffe2.html">Transfering a model from PyTorch to Caffe2 and Mobile using ONNX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="super_resolution_with_caffe2.html#transfering-srresnet-using-onnx">Transfering SRResNet using ONNX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="super_resolution_with_caffe2.html#running-the-model-on-mobile-devices">Running the model on mobile devices</a></li>
@@ -505,6 +474,45 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cpp_extension.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html">Saving and Loading Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#example">Example:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#load">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id1">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id2">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id3">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#id4">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pytorch_basics/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -752,12 +760,6 @@ to ensure they were imported correctly.</p>
 <li><img alt="../_images/sphx_glr_neural_style_tutorial_002.png" class="sphx-glr-multi-img first" src="../_images/sphx_glr_neural_style_tutorial_002.png" />
 </li>
 </ul>
-<div class="figure">
-<img alt="content1" src="../_images/sphx_glr_neural_style_tutorial_0011.png" />
-</div>
-<div class="figure">
-<img alt="content1" src="../_images/sphx_glr_neural_style_tutorial_0021.png" />
-</div>
 </div>
 <div class="section" id="loss-functions">
 <h2>Loss Functions<a class="headerlink" href="#loss-functions" title="Permalink to this headline">¶</a></h2>
@@ -974,9 +976,6 @@ or white noise.</p>
 </pre></div>
 </div>
 <img alt="../_images/sphx_glr_neural_style_tutorial_003.png" class="sphx-glr-single-img" src="../_images/sphx_glr_neural_style_tutorial_003.png" />
-<div class="figure">
-<img alt="content1" src="../_images/sphx_glr_neural_style_tutorial_0031.png" />
-</div>
 </div>
 <div class="section" id="gradient-descent">
 <h2>Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permalink to this headline">¶</a></h2>
@@ -1085,10 +1084,7 @@ run [300]:
 Style Loss : 3.006212 Content Loss: 10.445321
 </pre></div>
 </div>
-<div class="figure">
-<img alt="content1" src="../_images/sphx_glr_neural_style_tutorial_0041.png" />
-</div>
-<p><strong>Total running time of the script:</strong> ( 1 minutes  22.959 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 1 minutes  22.683 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-advanced-neural-style-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/neural_style_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">neural_style_tutorial.py</span></code></a></div>
@@ -1107,7 +1103,7 @@ Style Loss : 3.006212 Content Loss: 10.445321
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="super_resolution_with_caffe2.html" class="btn btn-neutral float-right" title="Transfering a model from PyTorch to Caffe2 and Mobile using ONNX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="numpy_extensions_tutorial.html" class="btn btn-neutral float-right" title="Creating extensions using numpy and scipy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../intermediate/spatial_transformer_tutorial.html" class="btn btn-neutral" title="Spatial Transformer Networks Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

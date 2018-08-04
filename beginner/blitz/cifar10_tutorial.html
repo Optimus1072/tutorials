@@ -325,42 +325,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../finetuning_torchvision_models_tutorial.html#final-thoughts-and-where-to-go-next">Final Thoughts and Where to Go Next</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../saving_loading_models.html">Saving and Loading Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#example">Example:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#save">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#load">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#id1">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#id2">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#id3">Save:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#id4">Load:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Intermediate Tutorials</span></p>
 <ul>
@@ -474,6 +438,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../advanced/neural_style_tutorial.html#gradient-descent">Gradient Descent</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html">Creating extensions using numpy and scipy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html#parameter-less-example">Parameter-less example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../advanced/numpy_extensions_tutorial.html#parametrized-example">Parametrized example</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html">Transfering a model from PyTorch to Caffe2 and Mobile using ONNX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html#transfering-srresnet-using-onnx">Transfering SRResNet using ONNX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced/super_resolution_with_caffe2.html#running-the-model-on-mobile-devices">Running the model on mobile devices</a></li>
@@ -505,6 +474,45 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../advanced/cpp_extension.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PyTorch Basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html">Saving and Loading Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#what-is-a-state-dict">What is a <code class="docutils literal notranslate"><span class="pre">state_dict</span></code>?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#example">Example:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#saving-loading-model-for-inference">Saving &amp; Loading Model for Inference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save-load-state-dict-recommended">Save/Load <code class="docutils literal notranslate"><span class="pre">state_dict</span></code> (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save-load-entire-model">Save/Load Entire Model</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training">Saving &amp; Loading a General Checkpoint for Inference and/or Resuming Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#load">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#saving-multiple-models-in-one-file">Saving Multiple Models in One File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#id1">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#id2">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#warmstarting-model-using-parameters-from-a-different-model">Warmstarting Model Using Parameters from a Different Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#id3">Save:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#id4">Load:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#saving-loading-model-across-devices">Saving &amp; Loading Model Across Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-cpu">Save on GPU, Load on CPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save-on-gpu-load-on-gpu">Save on GPU, Load on GPU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#save-on-cpu-load-on-gpu">Save on CPU, Load on GPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../pytorch_basics/saving_loading_models.html#saving-torch-nn-dataparallel-models">Saving <code class="docutils literal notranslate"><span class="pre">torch.nn.DataParallel</span></code> Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -716,7 +724,7 @@ Files already downloaded and verified
 </div>
 <img alt="../../_images/sphx_glr_cifar10_tutorial_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_cifar10_tutorial_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>plane horse   cat  bird
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>deer  deer  deer horse
 </pre></div>
 </div>
 </div>
@@ -794,18 +802,18 @@ network and optimize.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1,  2000] loss: 2.180
-[1,  4000] loss: 1.854
-[1,  6000] loss: 1.685
-[1,  8000] loss: 1.619
-[1, 10000] loss: 1.514
-[1, 12000] loss: 1.490
-[2,  2000] loss: 1.415
-[2,  4000] loss: 1.396
-[2,  6000] loss: 1.363
-[2,  8000] loss: 1.348
-[2, 10000] loss: 1.301
-[2, 12000] loss: 1.293
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1,  2000] loss: 2.169
+[1,  4000] loss: 1.806
+[1,  6000] loss: 1.674
+[1,  8000] loss: 1.584
+[1, 10000] loss: 1.522
+[1, 12000] loss: 1.485
+[2,  2000] loss: 1.425
+[2,  4000] loss: 1.411
+[2,  6000] loss: 1.379
+[2,  8000] loss: 1.357
+[2, 10000] loss: 1.330
+[2, 12000] loss: 1.341
 Finished Training
 </pre></div>
 </div>
@@ -846,7 +854,7 @@ So, let’s get the index of the highest energy:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:    cat plane plane plane
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Predicted:    cat  ship  ship  ship
 </pre></div>
 </div>
 <p>The results seem pretty good.</p>
@@ -894,16 +902,16 @@ not perform well:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy of plane : 62 %
-Accuracy of   car : 65 %
-Accuracy of  bird : 19 %
-Accuracy of   cat : 33 %
-Accuracy of  deer : 33 %
-Accuracy of   dog : 54 %
-Accuracy of  frog : 68 %
-Accuracy of horse : 71 %
-Accuracy of  ship : 67 %
-Accuracy of truck : 60 %
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Accuracy of plane : 64 %
+Accuracy of   car : 52 %
+Accuracy of  bird : 26 %
+Accuracy of   cat : 49 %
+Accuracy of  deer : 40 %
+Accuracy of   dog : 36 %
+Accuracy of  frog : 66 %
+Accuracy of horse : 64 %
+Accuracy of  ship : 73 %
+Accuracy of truck : 64 %
 </pre></div>
 </div>
 <p>Okay, so what next?</p>
@@ -966,7 +974,7 @@ please check out <a class="reference internal" href="data_parallel_tutorial.html
 <li><a class="reference external" href="https://discuss.pytorch.org/">Discuss PyTorch on the Forums</a></li>
 <li><a class="reference external" href="http://pytorch.slack.com/messages/beginner/">Chat with other users on Slack</a></li>
 </ul>
-<p><strong>Total running time of the script:</strong> ( 1 minutes  57.945 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 1 minutes  44.726 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-beginner-blitz-cifar10-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/cifar10_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">cifar10_tutorial.py</span></code></a></div>

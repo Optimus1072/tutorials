@@ -204,13 +204,6 @@ to ensure they were imported correctly.
 
 
 
-.. figure:: /_static/img/neural-style/sphx_glr_neural_style_tutorial_001.png
-   :alt: content1
-
-.. figure:: /_static/img/neural-style/sphx_glr_neural_style_tutorial_002.png
-   :alt: content1
-
-
 Loss Functions
 --------------
 Content Loss
@@ -515,14 +508,11 @@ or white noise.
 
 
 
+
 .. image:: /advanced/images/sphx_glr_neural_style_tutorial_003.png
     :class: sphx-glr-single-img
 
 
-
-
-.. figure:: /_static/img/neural-style/sphx_glr_neural_style_tutorial_003.png
-   :alt: content1
 
 
 Gradient Descent
@@ -677,11 +667,7 @@ Finally, we can run the algorithm.
     Style Loss : 3.006212 Content Loss: 10.445321
 
 
-.. figure:: /_static/img/neural-style/sphx_glr_neural_style_tutorial_004.png
-   :alt: content1
-
-
-**Total running time of the script:** ( 1 minutes  22.959 seconds)
+**Total running time of the script:** ( 1 minutes  22.683 seconds)
 
 
 .. _sphx_glr_download_advanced_neural_style_tutorial.py:
