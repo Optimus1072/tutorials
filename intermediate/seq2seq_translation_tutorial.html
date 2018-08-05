@@ -881,7 +881,7 @@ Counting words...
 Counted words:
 fra 4489
 eng 2925
-[&#39;il ecrit une longue lettre .&#39;, &#39;he s writing a long letter .&#39;]
+[&#39;je te laisse partir .&#39;, &#39;i m letting you go .&#39;]
 </pre></div>
 </div>
 </div>
@@ -1326,66 +1326,66 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 48s (- 25m 17s) (5000 6%) 2.8867
-3m 36s (- 23m 28s) (10000 13%) 2.3471
-5m 24s (- 21m 38s) (15000 20%) 2.0344
-7m 13s (- 19m 51s) (20000 26%) 1.7950
-9m 2s (- 18m 4s) (25000 33%) 1.6073
-10m 51s (- 16m 16s) (30000 40%) 1.4311
-12m 40s (- 14m 29s) (35000 46%) 1.2731
-14m 29s (- 12m 41s) (40000 53%) 1.1456
-16m 19s (- 10m 52s) (45000 60%) 1.0489
-18m 8s (- 9m 4s) (50000 66%) 0.9548
-19m 58s (- 7m 15s) (55000 73%) 0.8636
-21m 47s (- 5m 26s) (60000 80%) 0.7810
-23m 37s (- 3m 38s) (65000 86%) 0.7134
-25m 27s (- 1m 49s) (70000 93%) 0.6496
-27m 17s (- 0m 0s) (75000 100%) 0.6145
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 40s (- 23m 27s) (5000 6%) 2.9089
+3m 20s (- 21m 44s) (10000 13%) 2.3411
+5m 1s (- 20m 5s) (15000 20%) 2.0086
+6m 42s (- 18m 27s) (20000 26%) 1.7688
+8m 23s (- 16m 47s) (25000 33%) 1.5992
+10m 4s (- 15m 6s) (30000 40%) 1.4219
+11m 45s (- 13m 26s) (35000 46%) 1.2760
+13m 26s (- 11m 46s) (40000 53%) 1.1801
+15m 8s (- 10m 5s) (45000 60%) 1.0489
+16m 48s (- 8m 24s) (50000 66%) 0.9390
+18m 30s (- 6m 43s) (55000 73%) 0.8316
+20m 11s (- 5m 2s) (60000 80%) 0.7898
+21m 53s (- 3m 22s) (65000 86%) 0.7111
+23m 34s (- 1m 41s) (70000 93%) 0.6573
+25m 16s (- 0m 0s) (75000 100%) 0.6014
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; elle dort sur le ventre .
-= she sleeps on her stomach .
-&lt; she sleeps on her surprised . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; je ne suis pas amer .
+= i m not bitter .
+&lt; i m not fat . &lt;EOS&gt;
 
-&gt; je suis creve .
-= i m exhausted .
-&lt; i m exhausted . &lt;EOS&gt;
+&gt; je suis ravi de vous voir .
+= i m pleased to see you .
+&lt; i am very forward see you . &lt;EOS&gt;
 
-&gt; il est plutot beau .
-= he s kind of handsome .
-&lt; he is a handsome . &lt;EOS&gt;
+&gt; il depend totalement de ses parents .
+= he s totally dependent on his parents .
+&lt; he s totally dependent on his parents . &lt;EOS&gt;
 
-&gt; vous etes tres vifs .
-= you re very sharp .
-&lt; you re very understanding . &lt;EOS&gt;
+&gt; nous sommes fort occupes .
+= we re very busy .
+&lt; we re very busy . &lt;EOS&gt;
 
-&gt; je suis convaincu de son innocence .
-= i am convinced that he is innocent .
-&lt; i am convinced of his his . &lt;EOS&gt;
+&gt; il n est pas idiot .
+= he is no fool .
+&lt; he is not stupid . &lt;EOS&gt;
 
-&gt; vous etes notre millionieme client .
-= you are our one millionth customer .
-&lt; you are one one customer . &lt;EOS&gt;
+&gt; tu es hors service .
+= you re out of order .
+&lt; you re out of booze . &lt;EOS&gt;
 
-&gt; il est interesse par la musique .
-= he is interested in music .
-&lt; he is interested in music . &lt;EOS&gt;
+&gt; elle s assit a son cote .
+= she sat next to him .
+&lt; she sat to to me to . &lt;EOS&gt;
 
-&gt; vous etes trop maigre .
-= you re too skinny .
-&lt; you re too skinny . &lt;EOS&gt;
+&gt; c est mon heros .
+= he s my hero .
+&lt; he s my hero . &lt;EOS&gt;
 
-&gt; nous essayons de gagner .
-= we re trying to win .
-&lt; we re trying to win . &lt;EOS&gt;
+&gt; je ne porte aucun sous vetement .
+= i m not wearing any underwear .
+&lt; i am not wearing any underwear . &lt;EOS&gt;
 
-&gt; vous me touchez .
-= you re touching me .
-&lt; you re touching me . &lt;EOS&gt;
+&gt; tu fais l objet d une enquete .
+= you re under investigation .
+&lt; you re under . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1453,13 +1453,13 @@ and labels:</p>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she is two years younger than me . &lt;EOS&gt;
+output = she is five years younger than me . &lt;EOS&gt;
 input = elle est trop petit .
-output = she is too short . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
-output = i m not scared of dying . &lt;EOS&gt;
+output = i m not scared to die . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young director . &lt;EOS&gt;
+output = he s a talented young guy . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1487,7 +1487,7 @@ this:<ul>
 </ul>
 </li>
 </ul>
-<p><strong>Total running time of the script:</strong> ( 27 minutes  23.541 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 25 minutes  22.968 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/seq2seq_translation_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></div>
