@@ -361,7 +361,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4489
     eng 2925
-    ['je te laisse partir .', 'i m letting you go .']
+    ['tu es tellement impatiente .', 'you re so impatient .']
 
 
 The Seq2Seq Model
@@ -976,21 +976,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 40s (- 23m 27s) (5000 6%) 2.9089
-    3m 20s (- 21m 44s) (10000 13%) 2.3411
-    5m 1s (- 20m 5s) (15000 20%) 2.0086
-    6m 42s (- 18m 27s) (20000 26%) 1.7688
-    8m 23s (- 16m 47s) (25000 33%) 1.5992
-    10m 4s (- 15m 6s) (30000 40%) 1.4219
-    11m 45s (- 13m 26s) (35000 46%) 1.2760
-    13m 26s (- 11m 46s) (40000 53%) 1.1801
-    15m 8s (- 10m 5s) (45000 60%) 1.0489
-    16m 48s (- 8m 24s) (50000 66%) 0.9390
-    18m 30s (- 6m 43s) (55000 73%) 0.8316
-    20m 11s (- 5m 2s) (60000 80%) 0.7898
-    21m 53s (- 3m 22s) (65000 86%) 0.7111
-    23m 34s (- 1m 41s) (70000 93%) 0.6573
-    25m 16s (- 0m 0s) (75000 100%) 0.6014
+    1m 45s (- 24m 31s) (5000 6%) 2.8714
+    3m 32s (- 22m 58s) (10000 13%) 2.3621
+    5m 19s (- 21m 16s) (15000 20%) 2.0494
+    7m 6s (- 19m 33s) (20000 26%) 1.8163
+    8m 53s (- 17m 47s) (25000 33%) 1.5941
+    10m 41s (- 16m 1s) (30000 40%) 1.4199
+    12m 28s (- 14m 15s) (35000 46%) 1.2815
+    14m 16s (- 12m 29s) (40000 53%) 1.1584
+    16m 4s (- 10m 42s) (45000 60%) 1.0647
+    17m 52s (- 8m 56s) (50000 66%) 0.9655
+    19m 40s (- 7m 9s) (55000 73%) 0.8910
+    21m 27s (- 5m 21s) (60000 80%) 0.8181
+    23m 15s (- 3m 34s) (65000 86%) 0.7665
+    25m 3s (- 1m 47s) (70000 93%) 0.7041
+    26m 52s (- 0m 0s) (75000 100%) 0.6617
 
 
 
@@ -1010,45 +1010,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > je ne suis pas amer .
-    = i m not bitter .
-    < i m not fat . <EOS>
+    > il est tres prudent .
+    = he is very careful .
+    < he is very careful . <EOS>
 
-    > je suis ravi de vous voir .
-    = i m pleased to see you .
-    < i am very forward see you . <EOS>
+    > il est endormi .
+    = he s asleep .
+    < he s asleep . <EOS>
 
-    > il depend totalement de ses parents .
-    = he s totally dependent on his parents .
-    < he s totally dependent on his parents . <EOS>
+    > tu vas etre sur pieds .
+    = you re going to be ok .
+    < you re going to be ok . <EOS>
 
-    > nous sommes fort occupes .
-    = we re very busy .
-    < we re very busy . <EOS>
+    > nous sommes en train de nous battre .
+    = we re fighting .
+    < we re getting . <EOS>
 
-    > il n est pas idiot .
-    = he is no fool .
-    < he is not stupid . <EOS>
+    > je suis concerne par sa sante .
+    = i am concerned about his health .
+    < i am concerned about your health . <EOS>
 
-    > tu es hors service .
-    = you re out of order .
-    < you re out of booze . <EOS>
+    > je suis impressionnee .
+    = i m impressed .
+    < i m impressed . <EOS>
 
-    > elle s assit a son cote .
-    = she sat next to him .
-    < she sat to to me to . <EOS>
+    > je suis repu !
+    = i m full .
+    < i m full . <EOS>
 
-    > c est mon heros .
-    = he s my hero .
-    < he s my hero . <EOS>
+    > je suis ravi que vous ayez souleve ca .
+    = i m glad you brought that up .
+    < i m glad you brought that up . <EOS>
 
-    > je ne porte aucun sous vetement .
-    = i m not wearing any underwear .
-    < i am not wearing any underwear . <EOS>
+    > je suis plus fort desormais .
+    = i m stronger now .
+    < i m stronger now . <EOS>
 
-    > tu fais l objet d une enquete .
-    = you re under investigation .
-    < you re under . <EOS>
+    > c est toi l ainee .
+    = you re the oldest .
+    < you re the oldest . <EOS>
 
 
 Visualizing Attention
@@ -1162,13 +1162,13 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she is five years younger than me . <EOS>
+    output = she s five years younger than me . <EOS>
     input = elle est trop petit .
-    output = she s too short . <EOS>
+    output = she s too loud . <EOS>
     input = je ne crains pas de mourir .
-    output = i m not scared to die . <EOS>
+    output = i m not afraid to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young guy . <EOS>
+    output = he s a talented young young . <EOS>
 
 
 Exercises
@@ -1195,7 +1195,7 @@ Exercises
 
 
 
-**Total running time of the script:** ( 25 minutes  22.968 seconds)
+**Total running time of the script:** ( 26 minutes  58.905 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:
