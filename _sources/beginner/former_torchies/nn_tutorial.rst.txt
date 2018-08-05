@@ -200,7 +200,7 @@ Define a dummy target label and compute error using a loss function.
 
  .. code-block:: none
 
-    tensor(2.3536, grad_fn=<NllLossBackward>)
+    tensor(2.3643, grad_fn=<NllLossBackward>)
 
 
 The output of the ConvNet ``out`` is a ``Tensor``. We compute the loss
@@ -246,8 +246,8 @@ Let's access individual layer weights and gradients:
 
  .. code-block:: none
 
-    tensor(1.8730)
-    tensor(0.1235)
+    tensor(1.8079)
+    tensor(0.1563)
 
 
 Forward and Backward Function Hooks
@@ -308,7 +308,7 @@ We register a forward hook on conv2 and print some information
 
     input size: torch.Size([1, 10, 12, 12])
     output size: torch.Size([1, 20, 8, 8])
-    output norm: tensor(13.1544)
+    output norm: tensor(16.9539)
 
 
 We register a backward hook on conv2 and print some information
@@ -357,7 +357,7 @@ We register a backward hook on conv2 and print some information
 
     input size: torch.Size([1, 10, 12, 12])
     output size: torch.Size([1, 20, 8, 8])
-    output norm: tensor(13.1544)
+    output norm: tensor(16.9539)
     Inside Conv2d backward
     Inside class:Conv2d
 
@@ -368,7 +368,7 @@ We register a backward hook on conv2 and print some information
 
     grad_input size: torch.Size([1, 10, 12, 12])
     grad_output size: torch.Size([1, 20, 8, 8])
-    grad_input norm: tensor(0.0246)
+    grad_input norm: tensor(0.0386)
 
 
 A full and working MNIST example is located here

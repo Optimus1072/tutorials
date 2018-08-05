@@ -361,7 +361,7 @@ The full process for preparing the data is:
     Counted words:
     fra 4489
     eng 2925
-    ['elles ne sont pas encore chez elles .', 'they re not home yet .']
+    ['nous sommes plutot occupees ici .', 'we re kind of busy here .']
 
 
 The Seq2Seq Model
@@ -976,21 +976,21 @@ reasonable results.
 
  .. code-block:: none
 
-    1m 43s (- 24m 14s) (5000 6%) 2.8805
-    3m 28s (- 22m 36s) (10000 13%) 2.3336
-    5m 13s (- 20m 54s) (15000 20%) 2.0387
-    6m 59s (- 19m 12s) (20000 26%) 1.7771
-    8m 43s (- 17m 27s) (25000 33%) 1.5813
-    10m 27s (- 15m 41s) (30000 40%) 1.4049
-    12m 12s (- 13m 57s) (35000 46%) 1.2711
-    13m 57s (- 12m 12s) (40000 53%) 1.1669
-    15m 41s (- 10m 27s) (45000 60%) 1.0386
-    17m 26s (- 8m 43s) (50000 66%) 0.9625
-    19m 10s (- 6m 58s) (55000 73%) 0.8739
-    20m 56s (- 5m 14s) (60000 80%) 0.7902
-    22m 40s (- 3m 29s) (65000 86%) 0.7114
-    24m 25s (- 1m 44s) (70000 93%) 0.6548
-    26m 10s (- 0m 0s) (75000 100%) 0.6201
+    1m 43s (- 24m 15s) (5000 6%) 2.8948
+    3m 28s (- 22m 32s) (10000 13%) 2.3222
+    5m 11s (- 20m 44s) (15000 20%) 1.9892
+    6m 55s (- 19m 2s) (20000 26%) 1.7681
+    8m 39s (- 17m 19s) (25000 33%) 1.5370
+    10m 24s (- 15m 36s) (30000 40%) 1.3699
+    12m 9s (- 13m 53s) (35000 46%) 1.2403
+    13m 54s (- 12m 10s) (40000 53%) 1.1487
+    15m 39s (- 10m 26s) (45000 60%) 1.0061
+    17m 24s (- 8m 42s) (50000 66%) 0.9087
+    19m 9s (- 6m 58s) (55000 73%) 0.8222
+    20m 55s (- 5m 13s) (60000 80%) 0.7860
+    22m 40s (- 3m 29s) (65000 86%) 0.6824
+    24m 26s (- 1m 44s) (70000 93%) 0.6200
+    26m 11s (- 0m 0s) (75000 100%) 0.5741
 
 
 
@@ -1010,45 +1010,45 @@ reasonable results.
 
  .. code-block:: none
 
-    > il lui fait du chantage .
-    = she is being blackmailed by him .
-    < he is very by by him . <EOS>
+    > elle n est pas d humeur .
+    = she s not in the mood .
+    < she s not in the mood . <EOS>
 
-    > elle va apprendre a conduire .
-    = she is going to learn how to drive .
-    < she is going to learn to drive . . <EOS>
+    > je vais y songer .
+    = i m going to sleep on it .
+    < i m going to take it . <EOS>
 
-    > nous sommes des prisonniers .
-    = we re prisoners .
-    < we re prisoners . <EOS>
+    > je t aide quand tu veux .
+    = i am always ready to help you .
+    < i am always ready to help you . <EOS>
 
-    > nous sommes prets desormais .
-    = we re ready now .
-    < we re ready now . <EOS>
+    > je suis assez contente .
+    = i m happy enough .
+    < i m happy enough . <EOS>
 
-    > tu n es pas fatigue si ?
-    = you re not tired are you ?
-    < you re not tired are you ? <EOS>
+    > j emploie un nouvel ordinateur .
+    = i am using a new computer .
+    < i m looking for an computer . <EOS>
 
-    > vous etes important .
-    = you are important .
-    < you are important . <EOS>
+    > je suis certain que tu reussiras .
+    = i m sure that you ll succeed .
+    < i m sure that you ll succeed . <EOS>
 
-    > je te suis reconnaissant pour ta gentillesse .
-    = i am grateful to you for your kindness .
-    < i am grateful to you for your . . <EOS>
+    > vous etes mignon dans votre genre .
+    = you re kind of cute .
+    < you re kind of cute . <EOS>
 
-    > j ai peur qu il ne se blesse .
-    = i am afraid that he might get hurt .
-    < i am afraid that he might get hurt . <EOS>
+    > elle se promene parfois dans le parc .
+    = she sometimes takes a walk in the park .
+    < she sometimes not very in the the park . <EOS>
 
-    > tu t amuses pas vrai ?
-    = you re enjoying yourself aren t you ?
-    < you re enjoying yourself aren t you ? <EOS>
+    > je suis vraiment fatigue .
+    = i m really tired .
+    < i m really tired . <EOS>
 
-    > elle n a pas honte de son inconduite .
-    = she is not ashamed of her misconduct .
-    < she is not ashamed of her . . <EOS>
+    > je suis obstine .
+    = i m stubborn .
+    < i m not . <EOS>
 
 
 Visualizing Attention
@@ -1162,13 +1162,13 @@ and labels:
  .. code-block:: none
 
     input = elle a cinq ans de moins que moi .
-    output = she s five years younger than me . <EOS>
+    output = she is five years younger than me . <EOS>
     input = elle est trop petit .
-    output = she is too weak . <EOS>
+    output = she s too busy . <EOS>
     input = je ne crains pas de mourir .
     output = i m not scared to die . <EOS>
     input = c est un jeune directeur plein de talent .
-    output = he s a talented young . <EOS>
+    output = he s a talented young young . <EOS>
 
 
 Exercises
@@ -1195,7 +1195,7 @@ Exercises
 
 
 
-**Total running time of the script:** ( 26 minutes  17.218 seconds)
+**Total running time of the script:** ( 26 minutes  18.109 seconds)
 
 
 .. _sphx_glr_download_intermediate_seq2seq_translation_tutorial.py:

@@ -429,7 +429,7 @@ transformations while training.
     Test set: Average loss: 0.0332, Accuracy: 9900/10000 (99%)
 
 
-**Total running time of the script:** ( 8 minutes  47.863 seconds)
+**Total running time of the script:** ( 8 minutes  46.874 seconds)
 
 
 .. _sphx_glr_download_intermediate_spatial_transformer_tutorial.py:
