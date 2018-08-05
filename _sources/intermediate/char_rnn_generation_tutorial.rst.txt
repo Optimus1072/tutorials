@@ -140,7 +140,7 @@ and end up with a dictionary ``{language: [names ...]}``.
 
  .. code-block:: none
 
-    # categories: 18 ['Arabic', 'Greek', 'German', 'French', 'Vietnamese', 'Italian', 'Polish', 'Irish', 'Czech', 'Korean', 'Russian', 'Dutch', 'Chinese', 'Portuguese', 'Spanish', 'Scottish', 'Japanese', 'English']
+    # categories: 18 ['Scottish', 'Italian', 'Vietnamese', 'Korean', 'Polish', 'Greek', 'Japanese', 'English', 'Czech', 'Portuguese', 'Irish', 'Arabic', 'Spanish', 'Chinese', 'French', 'German', 'Russian', 'Dutch']
     O'Neal
 
 
@@ -436,26 +436,26 @@ in ``all_losses`` for plotting later.
 
  .. code-block:: none
 
-    0m 15s (5000 5%) 2.6078
-    0m 30s (10000 10%) 2.1032
-    0m 45s (15000 15%) 2.3680
-    1m 1s (20000 20%) 3.0082
-    1m 16s (25000 25%) 2.1653
-    1m 32s (30000 30%) 2.6382
-    1m 47s (35000 35%) 2.9890
-    2m 3s (40000 40%) 2.8999
-    2m 18s (45000 45%) 2.3136
-    2m 34s (50000 50%) 2.1864
-    2m 49s (55000 55%) 1.9108
-    3m 5s (60000 60%) 2.6454
-    3m 21s (65000 65%) 2.8560
-    3m 36s (70000 70%) 1.6848
-    3m 52s (75000 75%) 0.9727
-    4m 7s (80000 80%) 2.4427
-    4m 23s (85000 85%) 3.5587
-    4m 38s (90000 90%) 2.6246
-    4m 54s (95000 95%) 1.0599
-    5m 9s (100000 100%) 3.0800
+    0m 15s (5000 5%) 3.3251
+    0m 30s (10000 10%) 2.5289
+    0m 45s (15000 15%) 2.8318
+    1m 1s (20000 20%) 2.7752
+    1m 16s (25000 25%) 2.7541
+    1m 31s (30000 30%) 1.2193
+    1m 47s (35000 35%) 2.2301
+    2m 2s (40000 40%) 1.5919
+    2m 17s (45000 45%) 2.5924
+    2m 33s (50000 50%) 2.0055
+    2m 48s (55000 55%) 2.1115
+    3m 4s (60000 60%) 2.3075
+    3m 19s (65000 65%) 2.8325
+    3m 34s (70000 70%) 2.1151
+    3m 50s (75000 75%) 2.0243
+    4m 5s (80000 80%) 1.9789
+    4m 20s (85000 85%) 2.1983
+    4m 36s (90000 90%) 2.2429
+    4m 51s (95000 95%) 3.1266
+    5m 6s (100000 100%) 3.0552
 
 
 Plotting the Losses
@@ -563,17 +563,17 @@ feed that in as the next letter, and repeat until the EOS token.
 
  .. code-block:: none
 
-    Rovakin
-    Uanden
-    Shanton
-    Garter
+    Rovakov
+    Uarakov
+    Sharakov
+    Gerren
     Eren
-    Ront
-    Santera
-    Parer
-    Allan
-    Chan
-    Hang
+    Romer
+    Santano
+    Paler
+    Aller
+    Cha
+    Han
     Iun
 
 
@@ -595,7 +595,7 @@ Exercises
 
 
 
-**Total running time of the script:** ( 5 minutes  10.046 seconds)
+**Total running time of the script:** ( 5 minutes  6.731 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_generation_tutorial.py:
