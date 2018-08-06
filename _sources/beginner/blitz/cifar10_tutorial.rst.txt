@@ -157,7 +157,7 @@ Let us show some of the training images, for fun.
 
  .. code-block:: none
 
-    cat  ship   cat truck
+    ship   car   cat  bird
 
 
 2. Define a Convolution Neural Network
@@ -269,18 +269,18 @@ network and optimize.
 
  .. code-block:: none
 
-    [1,  2000] loss: 2.278
-    [1,  4000] loss: 1.971
-    [1,  6000] loss: 1.755
-    [1,  8000] loss: 1.622
-    [1, 10000] loss: 1.571
-    [1, 12000] loss: 1.496
-    [2,  2000] loss: 1.458
-    [2,  4000] loss: 1.397
-    [2,  6000] loss: 1.375
-    [2,  8000] loss: 1.343
-    [2, 10000] loss: 1.313
-    [2, 12000] loss: 1.293
+    [1,  2000] loss: 2.210
+    [1,  4000] loss: 1.877
+    [1,  6000] loss: 1.672
+    [1,  8000] loss: 1.585
+    [1, 10000] loss: 1.533
+    [1, 12000] loss: 1.464
+    [2,  2000] loss: 1.403
+    [2,  4000] loss: 1.366
+    [2,  6000] loss: 1.350
+    [2,  8000] loss: 1.300
+    [2, 10000] loss: 1.290
+    [2, 12000] loss: 1.277
     Finished Training
 
 
@@ -398,7 +398,7 @@ Let us look at how the network performs on the whole dataset.
 
  .. code-block:: none
 
-    Accuracy of the network on the 10000 test images: 52 %
+    Accuracy of the network on the 10000 test images: 55 %
 
 
 That looks waaay better than chance, which is 10% accuracy (randomly picking
@@ -441,16 +441,16 @@ not perform well:
 
  .. code-block:: none
 
-    Accuracy of plane : 43 %
-    Accuracy of   car : 66 %
-    Accuracy of  bird : 27 %
-    Accuracy of   cat : 45 %
-    Accuracy of  deer : 38 %
-    Accuracy of   dog : 54 %
-    Accuracy of  frog : 56 %
-    Accuracy of horse : 63 %
-    Accuracy of  ship : 82 %
-    Accuracy of truck : 51 %
+    Accuracy of plane : 57 %
+    Accuracy of   car : 82 %
+    Accuracy of  bird : 36 %
+    Accuracy of   cat : 25 %
+    Accuracy of  deer : 53 %
+    Accuracy of   dog : 44 %
+    Accuracy of  frog : 75 %
+    Accuracy of horse : 59 %
+    Accuracy of  ship : 72 %
+    Accuracy of truck : 52 %
 
 
 Okay, so what next?
@@ -544,7 +544,7 @@ Where do I go next?
 .. _Chat with other users on Slack: http://pytorch.slack.com/messages/beginner/
 
 
-**Total running time of the script:** ( 1 minutes  33.839 seconds)
+**Total running time of the script:** ( 1 minutes  40.583 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_cifar10_tutorial.py:
