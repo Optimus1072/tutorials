@@ -132,7 +132,7 @@ Do an operation of tensor:
 
  .. code-block:: none
 
-    <AddBackward object at 0x7fe1b2e2bb70>
+    <AddBackward object at 0x7ff88955ebe0>
 
 
 Do more operations on y
@@ -187,7 +187,7 @@ flag in-place. The input flag defaults to ``True`` if not given.
 
     False
     True
-    <SumBackward0 object at 0x7fe1b2e37588>
+    <SumBackward0 object at 0x7ff889762400>
 
 
 Gradients
@@ -268,7 +268,7 @@ You can do many crazy things with autograd!
 
  .. code-block:: none
 
-    tensor([  69.9276,   73.8118, 1002.4647], grad_fn=<MulBackward>)
+    tensor([1809.8401,   75.7162, -128.2151], grad_fn=<MulBackward>)
 
 
 
