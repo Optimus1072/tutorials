@@ -667,7 +667,7 @@ Finally, we can run the algorithm.
     Style Loss : 3.006212 Content Loss: 10.445321
 
 
-**Total running time of the script:** ( 1 minutes  28.624 seconds)
+**Total running time of the script:** ( 1 minutes  22.173 seconds)
 
 
 .. _sphx_glr_download_advanced_neural_style_tutorial.py:
