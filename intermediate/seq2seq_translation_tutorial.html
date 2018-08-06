@@ -881,7 +881,7 @@ Counting words...
 Counted words:
 fra 4489
 eng 2925
-[&#39;tu es intrepide .&#39;, &#39;you re fearless .&#39;]
+[&#39;j ai hate de te voir bientot .&#39;, &#39;i m looking forward to seeing you soon .&#39;]
 </pre></div>
 </div>
 </div>
@@ -1326,66 +1326,66 @@ encoder and decoder are initialized and run <code class="docutils literal notran
 </li>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 46s (- 24m 46s) (5000 6%) 2.9169
-3m 31s (- 22m 53s) (10000 13%) 2.3186
-5m 17s (- 21m 9s) (15000 20%) 2.0076
-7m 3s (- 19m 23s) (20000 26%) 1.7773
-8m 49s (- 17m 38s) (25000 33%) 1.5793
-10m 35s (- 15m 53s) (30000 40%) 1.4131
-12m 23s (- 14m 9s) (35000 46%) 1.2490
-14m 9s (- 12m 23s) (40000 53%) 1.1310
-15m 56s (- 10m 37s) (45000 60%) 0.9948
-17m 43s (- 8m 51s) (50000 66%) 0.9144
-19m 30s (- 7m 5s) (55000 73%) 0.8371
-21m 17s (- 5m 19s) (60000 80%) 0.7584
-23m 4s (- 3m 32s) (65000 86%) 0.7035
-24m 51s (- 1m 46s) (70000 93%) 0.6306
-26m 39s (- 0m 0s) (75000 100%) 0.5989
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1m 42s (- 23m 54s) (5000 6%) 2.8758
+3m 26s (- 22m 20s) (10000 13%) 2.3172
+5m 9s (- 20m 38s) (15000 20%) 2.0002
+6m 53s (- 18m 57s) (20000 26%) 1.7565
+8m 37s (- 17m 15s) (25000 33%) 1.5658
+10m 23s (- 15m 35s) (30000 40%) 1.3755
+12m 9s (- 13m 54s) (35000 46%) 1.2170
+13m 55s (- 12m 11s) (40000 53%) 1.1234
+15m 42s (- 10m 28s) (45000 60%) 0.9933
+17m 28s (- 8m 44s) (50000 66%) 0.9188
+19m 13s (- 6m 59s) (55000 73%) 0.8378
+20m 57s (- 5m 14s) (60000 80%) 0.7662
+22m 42s (- 3m 29s) (65000 86%) 0.6865
+24m 26s (- 1m 44s) (70000 93%) 0.6372
+26m 12s (- 0m 0s) (75000 100%) 0.5604
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">evaluateRandomly</span><span class="p">(</span><span class="n">encoder1</span><span class="p">,</span> <span class="n">attn_decoder1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; vous etes si gentille !
-= you re so sweet .
-&lt; you re so sweet . &lt;EOS&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; ils sont vieux .
+= they re old .
+&lt; they re old . &lt;EOS&gt;
 
-&gt; j ai peur de mourir .
-= i m afraid of dying .
-&lt; i am afraid of dying . &lt;EOS&gt;
+&gt; je n en suis pas fiere .
+= i m not proud of it .
+&lt; i m not proud of that . &lt;EOS&gt;
 
-&gt; il est medium .
-= he is a psychic .
-&lt; he is a psychic . &lt;EOS&gt;
+&gt; vous ne devez pas quitter cette piece .
+= you are not to leave this room .
+&lt; you are not to leave this room . &lt;EOS&gt;
 
-&gt; vous etes toujours celibataire n est ce pas ?
-= you re still single aren t you ?
-&lt; you re still single aren t you ? &lt;EOS&gt;
+&gt; tu es une fille interessante .
+= you re an interesting girl .
+&lt; you re an interesting girl . &lt;EOS&gt;
 
-&gt; mon ordinateur portable tourne sous linux .
-= i m running linux on my laptop .
-&lt; i m running some my uncle can . &lt;EOS&gt;
+&gt; il ecrit son journal .
+= he s writing his diary .
+&lt; he s writing his own . &lt;EOS&gt;
 
-&gt; j etudie la musique .
-= i m learning music .
-&lt; i am studying music . &lt;EOS&gt;
+&gt; vous etes fort grossiers .
+= you re very rude .
+&lt; you re very rude . &lt;EOS&gt;
 
-&gt; je suis enfant unique .
-= i am an only child .
-&lt; i am an only child . &lt;EOS&gt;
+&gt; je ne suis plus votre epoux .
+= i m not your husband anymore .
+&lt; i m not your husband anymore . &lt;EOS&gt;
 
-&gt; je suis photographe .
-= i m a photographer .
-&lt; i m a . . &lt;EOS&gt;
+&gt; il est plus ruse que sage .
+= he is more crafty than wise .
+&lt; he is more than than they . &lt;EOS&gt;
 
-&gt; elles sont propres .
-= they re clean .
-&lt; they re clean . &lt;EOS&gt;
+&gt; nous sommes des hommes occupes .
+= we are busy men .
+&lt; we are busy big . &lt;EOS&gt;
 
-&gt; je suis desolee de vous avoir tire dessus .
-= i m sorry i shot you .
-&lt; i m sorry i yelled you . &lt;EOS&gt;
+&gt; vous etes vieux .
+= you re old .
+&lt; you re old . &lt;EOS&gt;
 </pre></div>
 </div>
 <div class="section" id="visualizing-attention">
@@ -1453,13 +1453,13 @@ and labels:</p>
 </ul>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>input = elle a cinq ans de moins que moi .
-output = she s five years younger than me . &lt;EOS&gt;
+output = she s five years younger than than me . &lt;EOS&gt;
 input = elle est trop petit .
-output = she s too loud . &lt;EOS&gt;
+output = she s too short . &lt;EOS&gt;
 input = je ne crains pas de mourir .
 output = i m not scared of dying . &lt;EOS&gt;
 input = c est un jeune directeur plein de talent .
-output = he s a talented young director . &lt;EOS&gt;
+output = he s a talented young young . . &lt;EOS&gt;
 </pre></div>
 </div>
 </div>
@@ -1487,7 +1487,7 @@ this:<ul>
 </ul>
 </li>
 </ul>
-<p><strong>Total running time of the script:</strong> ( 26 minutes  45.420 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 26 minutes  18.196 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-seq2seq-translation-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/seq2seq_translation_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">seq2seq_translation_tutorial.py</span></code></a></div>
