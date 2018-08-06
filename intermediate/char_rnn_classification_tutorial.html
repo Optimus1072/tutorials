@@ -723,7 +723,7 @@ ASCII).</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;data/names/English.txt&#39;, &#39;data/names/Vietnamese.txt&#39;, &#39;data/names/Spanish.txt&#39;, &#39;data/names/Chinese.txt&#39;, &#39;data/names/Greek.txt&#39;, &#39;data/names/Russian.txt&#39;, &#39;data/names/Korean.txt&#39;, &#39;data/names/Polish.txt&#39;, &#39;data/names/Japanese.txt&#39;, &#39;data/names/Italian.txt&#39;, &#39;data/names/French.txt&#39;, &#39;data/names/Dutch.txt&#39;, &#39;data/names/German.txt&#39;, &#39;data/names/Portuguese.txt&#39;, &#39;data/names/Czech.txt&#39;, &#39;data/names/Arabic.txt&#39;, &#39;data/names/Scottish.txt&#39;, &#39;data/names/Irish.txt&#39;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;data/names/Vietnamese.txt&#39;, &#39;data/names/Korean.txt&#39;, &#39;data/names/Spanish.txt&#39;, &#39;data/names/Chinese.txt&#39;, &#39;data/names/Polish.txt&#39;, &#39;data/names/Russian.txt&#39;, &#39;data/names/English.txt&#39;, &#39;data/names/Dutch.txt&#39;, &#39;data/names/Czech.txt&#39;, &#39;data/names/Irish.txt&#39;, &#39;data/names/Japanese.txt&#39;, &#39;data/names/Arabic.txt&#39;, &#39;data/names/French.txt&#39;, &#39;data/names/German.txt&#39;, &#39;data/names/Greek.txt&#39;, &#39;data/names/Portuguese.txt&#39;, &#39;data/names/Italian.txt&#39;, &#39;data/names/Scottish.txt&#39;]
 Slusarski
 </pre></div>
 </div>
@@ -847,9 +847,9 @@ pre-computing batches of Tensors.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.8908, -2.8965, -2.9417, -2.8192, -2.9180, -2.7601, -2.9416, -2.8718,
-         -2.9632, -2.8205, -2.9136, -2.9284, -2.9699, -2.9074, -2.8830, -2.9166,
-         -2.8969, -2.8146]], grad_fn=&lt;LogSoftmaxBackward&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-2.9148, -2.8691, -2.9460, -2.7992, -2.9643, -2.9144, -2.8444, -2.8858,
+         -2.7974, -2.9618, -2.8740, -2.9090, -2.8804, -2.8554, -2.9310, -2.8864,
+         -2.8910, -2.9220]], grad_fn=&lt;LogSoftmaxBackward&gt;)
 </pre></div>
 </div>
 <p>As you can see the output is a <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">x</span> <span class="pre">n_categories&gt;</span></code> Tensor, where
@@ -872,7 +872,7 @@ of the greatest value:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(&#39;Russian&#39;, 5)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(&#39;Czech&#39;, 8)
 </pre></div>
 </div>
 <p>We will also want a quick way to get a training example (a name and its
@@ -895,16 +895,16 @@ language):</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Polish / line = Szwarc
-category = Portuguese / line = Coelho
-category = Korean / line = Moon
-category = Scottish / line = Macleod
-category = Dutch / line = Amstel
-category = Czech / line = Slejtr
-category = Irish / line = Cuidightheach
-category = Japanese / line = Kajiwara
-category = Korean / line = Si
-category = Vietnamese / line = Phi
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>category = Greek / line = Theohari
+category = Greek / line = Close
+category = German / line = Scheinberg
+category = Spanish / line = Alfaro
+category = Scottish / line = Mckenzie
+category = Irish / line = Peatain
+category = Japanese / line = Shima
+category = Polish / line = Zdunowski
+category = Japanese / line = Toshusai
+category = German / line = Wirnhier
 </pre></div>
 </div>
 </div>
@@ -994,26 +994,26 @@ average of the loss.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 1.9888 Chang / Chinese ✓
-10000 10% (0m 12s) 3.3301 Kwang  / Arabic ✗ (Korean)
-15000 15% (0m 18s) 1.0257 Diakogeorgiou / Greek ✓
-20000 20% (0m 25s) 0.5501 Carboni / Italian ✓
-25000 25% (0m 31s) 0.8716 Zhang / Chinese ✓
-30000 30% (0m 37s) 0.5602 Masih / Arabic ✓
-35000 35% (0m 43s) 0.4083 Pakulski / Polish ✓
-40000 40% (0m 50s) 1.6039 Selmone / French ✗ (Italian)
-45000 45% (0m 56s) 1.6063 Sherak / Polish ✗ (Czech)
-50000 50% (1m 2s) 0.3113 Nishimura / Japanese ✓
-55000 55% (1m 9s) 1.2600 Boyle / Scottish ✓
-60000 60% (1m 15s) 0.1795 Tamuro / Japanese ✓
-65000 65% (1m 21s) 0.8471 Houten / Dutch ✓
-70000 70% (1m 28s) 0.1945 Uchiyama / Japanese ✓
-75000 75% (1m 34s) 0.1071 Yoo / Korean ✓
-80000 80% (1m 40s) 0.5253 Kuijpers / Dutch ✓
-85000 85% (1m 47s) 0.7037 Telis / Greek ✓
-90000 90% (1m 53s) 1.6870 Sneijer / Portuguese ✗ (Dutch)
-95000 95% (1m 59s) 0.2085 Hutmacher / German ✓
-100000 100% (2m 6s) 0.5108 Cassidy / Irish ✓
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>5000 5% (0m 6s) 2.5817 Ngai / Vietnamese ✗ (Korean)
+10000 10% (0m 12s) 3.4872 Muir / Korean ✗ (Scottish)
+15000 15% (0m 18s) 4.3358 Tejc / Chinese ✗ (Czech)
+20000 20% (0m 24s) 1.7479 Seto / Korean ✗ (Chinese)
+25000 25% (0m 30s) 1.7700 Joe / Korean ✗ (Chinese)
+30000 30% (0m 37s) 0.1483 Janowski / Polish ✓
+35000 35% (0m 43s) 2.0378 Kikkert / Arabic ✗ (Dutch)
+40000 40% (0m 49s) 1.9951 Sultana / Spanish ✗ (Italian)
+45000 45% (0m 55s) 0.4776 Doan / Vietnamese ✓
+50000 50% (1m 1s) 0.8936 Petimezas / Greek ✓
+55000 55% (1m 8s) 0.6871 Hua / Chinese ✓
+60000 60% (1m 14s) 1.9861 Roche / Portuguese ✗ (French)
+65000 65% (1m 20s) 0.5694 Basurto / Portuguese ✓
+70000 70% (1m 26s) 2.7839 Muggia / Scottish ✗ (Italian)
+75000 75% (1m 32s) 1.3697 Lobo / Portuguese ✓
+80000 80% (1m 38s) 1.7142 Amato / Portuguese ✗ (Italian)
+85000 85% (1m 45s) 0.4279 Medeiros / Portuguese ✓
+90000 90% (1m 51s) 0.6420 Nader / Arabic ✓
+95000 95% (1m 57s) 1.8018 Mackay / Arabic ✗ (Scottish)
+100000 100% (2m 3s) 0.9050 Filipek / Polish ✓
 </pre></div>
 </div>
 </div>
@@ -1110,19 +1110,19 @@ English (perhaps because of overlap with other languages).</p>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; Dovesky
-(-0.41) Russian
-(-1.70) Czech
-(-2.96) Polish
+(-0.74) Czech
+(-1.02) Russian
+(-2.66) English
 
 &gt; Jackson
-(-0.18) Scottish
-(-2.30) English
-(-3.52) Russian
+(-1.09) English
+(-1.20) Scottish
+(-1.51) Russian
 
 &gt; Satoshi
-(-1.26) Japanese
-(-1.69) Arabic
-(-1.71) Italian
+(-1.38) Japanese
+(-1.56) Italian
+(-1.99) Arabic
 </pre></div>
 </div>
 <p>The final versions of the scripts <a class="reference external" href="https://github.com/spro/practical-pytorch/tree/master/char-rnn-classification">in the Practical PyTorch
@@ -1164,7 +1164,7 @@ output of predictions.</p>
 </ul>
 </li>
 </ul>
-<p><strong>Total running time of the script:</strong> ( 2 minutes  13.064 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 2 minutes  10.197 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-intermediate-char-rnn-classification-tutorial-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/char_rnn_classification_tutorial.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">char_rnn_classification_tutorial.py</span></code></a></div>
