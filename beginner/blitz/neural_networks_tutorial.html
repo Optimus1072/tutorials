@@ -729,8 +729,8 @@ MNIST dataset, please resize the images from the dataset to 32x32.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[-0.0187,  0.1086, -0.1200,  0.0427,  0.1471,  0.1412,  0.1495,  0.0553,
-          0.0052,  0.0106]], grad_fn=&lt;ThAddmmBackward&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.0662, -0.0546,  0.0436, -0.0343,  0.0746, -0.0654,  0.1484, -0.0332,
+         -0.1226,  0.0473]], grad_fn=&lt;ThAddmmBackward&gt;)
 </pre></div>
 </div>
 <p>Zero the gradient buffers of all parameters and backprops with random
@@ -802,7 +802,7 @@ between the input and the target.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(0.2870, grad_fn=&lt;MseLossBackward&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor(1.0858, grad_fn=&lt;MseLossBackward&gt;)
 </pre></div>
 </div>
 <p>Now, if you follow <code class="docutils literal notranslate"><span class="pre">loss</span></code> in the backward direction, using its
@@ -824,9 +824,9 @@ will have their <code class="docutils literal notranslate"><span class="pre">.gr
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward object at 0x7fb14687e630&gt;
-&lt;ThAddmmBackward object at 0x7fb14687e9e8&gt;
-&lt;ExpandBackward object at 0x7fb14687e9e8&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;MseLossBackward object at 0x7f61383b5470&gt;
+&lt;ThAddmmBackward object at 0x7f61383b5ba8&gt;
+&lt;ExpandBackward object at 0x7f61383b5ba8&gt;
 </pre></div>
 </div>
 </div>
@@ -852,7 +852,7 @@ gradients before and after the backward.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>conv1.bias.grad before backward
 tensor([0., 0., 0., 0., 0., 0.])
 conv1.bias.grad after backward
-tensor([ 0.0154, -0.0066, -0.0047, -0.0062, -0.0094,  0.0009])
+tensor([ 0.0055,  0.0051,  0.0177, -0.0066,  0.0024,  0.0123])
 </pre></div>
 </div>
 <p>Now, we have seen how to use loss functions.</p>
