@@ -689,7 +689,7 @@ argument that is a tensor of matching shape.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;AddBackward object at 0x7f61382b2e80&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;AddBackward object at 0x7fb1e6f3bdd8&gt;
 </pre></div>
 </div>
 <p>Do more operations on y</p>
@@ -718,7 +718,7 @@ flag in-place. The input flag defaults to <code class="docutils literal notransl
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>False
 True
-&lt;SumBackward0 object at 0x7f6138311be0&gt;
+&lt;SumBackward0 object at 0x7fb1e6beba90&gt;
 </pre></div>
 </div>
 </div>
@@ -757,7 +757,7 @@ Therefore,
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([ 880.5737, 1285.1648,  101.7480], grad_fn=&lt;MulBackward&gt;)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([-668.7051, -731.1906, -215.8119], grad_fn=&lt;MulBackward&gt;)
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gradients</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
@@ -767,7 +767,7 @@ Therefore,
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([ 102.4000, 1024.0000,    0.1024])
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tensor([ 204.8000, 2048.0000,    0.2048])
 </pre></div>
 </div>
 <p>You can also stop autograd from tracking history on Tensors

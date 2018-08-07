@@ -157,7 +157,7 @@ Let us show some of the training images, for fun.
 
  .. code-block:: none
 
-    bird   cat  bird   cat
+    horse plane plane plane
 
 
 2. Define a Convolution Neural Network
@@ -269,18 +269,18 @@ network and optimize.
 
  .. code-block:: none
 
-    [1,  2000] loss: 2.239
-    [1,  4000] loss: 1.901
-    [1,  6000] loss: 1.684
+    [1,  2000] loss: 2.196
+    [1,  4000] loss: 1.891
+    [1,  6000] loss: 1.709
     [1,  8000] loss: 1.597
-    [1, 10000] loss: 1.532
-    [1, 12000] loss: 1.489
-    [2,  2000] loss: 1.418
-    [2,  4000] loss: 1.360
-    [2,  6000] loss: 1.347
-    [2,  8000] loss: 1.309
-    [2, 10000] loss: 1.300
-    [2, 12000] loss: 1.279
+    [1, 10000] loss: 1.546
+    [1, 12000] loss: 1.483
+    [2,  2000] loss: 1.390
+    [2,  4000] loss: 1.383
+    [2,  6000] loss: 1.378
+    [2,  8000] loss: 1.349
+    [2, 10000] loss: 1.326
+    [2, 12000] loss: 1.306
     Finished Training
 
 
@@ -363,7 +363,7 @@ So, let's get the index of the highest energy:
 
  .. code-block:: none
 
-    Predicted:    dog   car   car  ship
+    Predicted:    cat   car   car  ship
 
 
 The results seem pretty good.
@@ -398,7 +398,7 @@ Let us look at how the network performs on the whole dataset.
 
  .. code-block:: none
 
-    Accuracy of the network on the 10000 test images: 56 %
+    Accuracy of the network on the 10000 test images: 55 %
 
 
 That looks waaay better than chance, which is 10% accuracy (randomly picking
@@ -441,16 +441,16 @@ not perform well:
 
  .. code-block:: none
 
-    Accuracy of plane : 55 %
-    Accuracy of   car : 77 %
-    Accuracy of  bird : 33 %
-    Accuracy of   cat : 29 %
-    Accuracy of  deer : 42 %
-    Accuracy of   dog : 61 %
-    Accuracy of  frog : 59 %
-    Accuracy of horse : 59 %
-    Accuracy of  ship : 80 %
-    Accuracy of truck : 62 %
+    Accuracy of plane : 60 %
+    Accuracy of   car : 71 %
+    Accuracy of  bird : 37 %
+    Accuracy of   cat : 38 %
+    Accuracy of  deer : 44 %
+    Accuracy of   dog : 44 %
+    Accuracy of  frog : 63 %
+    Accuracy of horse : 50 %
+    Accuracy of  ship : 71 %
+    Accuracy of truck : 68 %
 
 
 Okay, so what next?
@@ -544,7 +544,7 @@ Where do I go next?
 .. _Chat with other users on Slack: http://pytorch.slack.com/messages/beginner/
 
 
-**Total running time of the script:** ( 1 minutes  33.559 seconds)
+**Total running time of the script:** ( 1 minutes  46.669 seconds)
 
 
 .. _sphx_glr_download_beginner_blitz_cifar10_tutorial.py:
