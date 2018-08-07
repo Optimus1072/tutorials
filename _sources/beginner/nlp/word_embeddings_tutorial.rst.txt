@@ -316,7 +316,7 @@ examples and update the parameters with backpropagation.
  .. code-block:: none
 
     [(['When', 'forty'], 'winters'), (['forty', 'winters'], 'shall'), (['winters', 'shall'], 'besiege')]
-    [519.9594185352325, 517.4114165306091, 514.8795454502106, 512.361799955368, 509.85708236694336, 507.3657088279724, 504.8877332210541, 502.42128562927246, 499.96634793281555, 497.52185821533203]
+    [519.680153131485, 516.9263758659363, 514.1943790912628, 511.484783411026, 508.7950792312622, 506.12140011787415, 503.464359998703, 500.82239031791687, 498.19665002822876, 495.58590817451477]
 
 
 Exercise: Computing Word Embeddings: Continuous Bag-of-Words
@@ -407,7 +407,7 @@ tips:
     [(['We', 'are', 'to', 'study'], 'about'), (['are', 'about', 'study', 'the'], 'to'), (['about', 'to', 'the', 'idea'], 'study'), (['to', 'study', 'idea', 'of'], 'the'), (['study', 'the', 'of', 'a'], 'idea')]
 
 
-**Total running time of the script:** ( 0 minutes  0.463 seconds)
+**Total running time of the script:** ( 0 minutes  0.480 seconds)
 
 
 .. _sphx_glr_download_beginner_nlp_word_embeddings_tutorial.py:

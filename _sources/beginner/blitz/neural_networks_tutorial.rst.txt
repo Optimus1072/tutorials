@@ -160,8 +160,8 @@ MNIST dataset, please resize the images from the dataset to 32x32.
 
  .. code-block:: none
 
-    tensor([[ 0.0055, -0.0245, -0.0414, -0.1654,  0.0519,  0.0667, -0.0316, -0.0386,
-             -0.0179,  0.0878]], grad_fn=<ThAddmmBackward>)
+    tensor([[ 0.0618, -0.0449, -0.0582,  0.0605,  0.2198,  0.0640,  0.1279,  0.1297,
+              0.0366, -0.1387]], grad_fn=<ThAddmmBackward>)
 
 
 Zero the gradient buffers of all parameters and backprops with random
@@ -253,7 +253,7 @@ For example:
 
  .. code-block:: none
 
-    tensor(0.9404, grad_fn=<MseLossBackward>)
+    tensor(1.3972, grad_fn=<MseLossBackward>)
 
 
 Now, if you follow ``loss`` in the backward direction, using its
@@ -292,9 +292,9 @@ For illustration, let us follow a few steps backward:
 
  .. code-block:: none
 
-    <MseLossBackward object at 0x7fa364838550>
-    <ThAddmmBackward object at 0x7fa364f7f320>
-    <ExpandBackward object at 0x7fa364f7f320>
+    <MseLossBackward object at 0x7fbaa3189390>
+    <ThAddmmBackward object at 0x7fbaa3189400>
+    <ExpandBackward object at 0x7fbaa3189400>
 
 
 Backprop
@@ -336,7 +336,7 @@ gradients before and after the backward.
     conv1.bias.grad before backward
     tensor([0., 0., 0., 0., 0., 0.])
     conv1.bias.grad after backward
-    tensor([-0.0031,  0.0053, -0.0052,  0.0022,  0.0066, -0.0150])
+    tensor([-0.0047,  0.0204, -0.0022,  0.0368, -0.0025, -0.0097])
 
 
 Now, we have seen how to use loss functions.
