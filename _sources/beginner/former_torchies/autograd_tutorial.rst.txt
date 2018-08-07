@@ -171,7 +171,7 @@ so it has a grad_fn
 
  .. code-block:: none
 
-    <AddBackward object at 0x7fce39d2a668>
+    <AddBackward object at 0x7fe604223438>
 
 
 More operations on y:
@@ -227,7 +227,7 @@ flag in-place. The input flag defaults to ``True`` if not given.
 
     False
     True
-    <SumBackward0 object at 0x7fce02f66da0>
+    <SumBackward0 object at 0x7fe626013e48>
 
 
 Gradients
@@ -333,8 +333,8 @@ just backprop random gradients
 
  .. code-block:: none
 
-    tensor([[2.6262, 0.4243],
-            [1.5907, 1.4179]])
+    tensor([[ 2.3889,  1.2721],
+            [-1.5153,  0.1517]])
 
 
 You can also stops autograd from tracking history on Tensors
@@ -365,7 +365,7 @@ with requires_grad=True by wrapping the code block in
     False
 
 
-**Total running time of the script:** ( 0 minutes  0.005 seconds)
+**Total running time of the script:** ( 0 minutes  0.006 seconds)
 
 
 .. _sphx_glr_download_beginner_former_torchies_autograd_tutorial.py:
