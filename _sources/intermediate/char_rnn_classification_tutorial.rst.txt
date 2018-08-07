@@ -128,7 +128,7 @@ We'll end up with a dictionary of lists of names per language,
 
  .. code-block:: none
 
-    ['data/names/German.txt', 'data/names/Chinese.txt', 'data/names/Spanish.txt', 'data/names/French.txt', 'data/names/Arabic.txt', 'data/names/Russian.txt', 'data/names/English.txt', 'data/names/Greek.txt', 'data/names/Vietnamese.txt', 'data/names/Japanese.txt', 'data/names/Portuguese.txt', 'data/names/Polish.txt', 'data/names/Korean.txt', 'data/names/Dutch.txt', 'data/names/Czech.txt', 'data/names/Irish.txt', 'data/names/Scottish.txt', 'data/names/Italian.txt']
+    ['data/names/Japanese.txt', 'data/names/Portuguese.txt', 'data/names/Dutch.txt', 'data/names/Irish.txt', 'data/names/Czech.txt', 'data/names/English.txt', 'data/names/German.txt', 'data/names/Russian.txt', 'data/names/French.txt', 'data/names/Arabic.txt', 'data/names/Scottish.txt', 'data/names/Chinese.txt', 'data/names/Spanish.txt', 'data/names/Italian.txt', 'data/names/Greek.txt', 'data/names/Polish.txt', 'data/names/Vietnamese.txt', 'data/names/Korean.txt']
     Slusarski
 
 
@@ -332,9 +332,9 @@ pre-computing batches of Tensors.
 
  .. code-block:: none
 
-    tensor([[-2.9410, -2.8535, -2.9596, -2.8499, -2.9934, -2.7974, -2.9386, -2.8240,
-             -2.7772, -2.9866, -2.9557, -2.9865, -2.9280, -2.8201, -2.8107, -2.7989,
-             -2.9387, -2.9148]], grad_fn=<LogSoftmaxBackward>)
+    tensor([[-2.8889, -2.9220, -2.9196, -2.8836, -2.8785, -2.9083, -2.8528, -2.8214,
+             -2.8890, -2.9937, -2.8806, -2.8179, -3.0046, -2.9597, -2.9008, -2.8212,
+             -2.9450, -2.7715]], grad_fn=<LogSoftmaxBackward>)
 
 
 As you can see the output is a ``<1 x n_categories>`` Tensor, where
@@ -376,7 +376,7 @@ of the greatest value:
 
  .. code-block:: none
 
-    ('Vietnamese', 8)
+    ('Korean', 17)
 
 
 We will also want a quick way to get a training example (a name and its
@@ -415,16 +415,16 @@ language):
 
  .. code-block:: none
 
-    category = Italian / line = Bartalotti
-    category = Arabic / line = Kassis
-    category = Spanish / line = Gonzales
-    category = Italian / line = Scutese
-    category = Korean / line = Lim 
-    category = Irish / line = Daly
-    category = French / line = De sauveterre
-    category = Vietnamese / line = Thach
-    category = Irish / line = Names
-    category = Polish / line = Dubanowski
+    category = Korean / line = Ho
+    category = Russian / line = Lutohin
+    category = Irish / line = Faolan
+    category = French / line = Sauvageot
+    category = French / line = Mullins
+    category = Dutch / line = Meisner
+    category = Greek / line = Kanavos
+    category = Vietnamese / line = Lac
+    category = Czech / line = Urbanovska
+    category = Spanish / line = Michel
 
 
 Training the Network
@@ -556,26 +556,26 @@ average of the loss.
 
  .. code-block:: none
 
-    5000 5% (0m 6s) 0.8244 Haritopoulos / Greek ✓
-    10000 10% (0m 12s) 1.8917 Niall / Irish ✓
-    15000 15% (0m 19s) 1.1978 Yeon / Korean ✓
-    20000 20% (0m 25s) 0.2405 Adamidis / Greek ✓
-    25000 25% (0m 31s) 1.3070 Araullo / Spanish ✗ (Portuguese)
-    30000 30% (0m 38s) 1.8700 Kwak / Polish ✗ (Korean)
-    35000 35% (0m 44s) 3.8803 Rompay / Czech ✗ (Dutch)
-    40000 40% (0m 50s) 1.7490 Rang / Korean ✗ (Chinese)
-    45000 45% (0m 57s) 0.9003 Vuu / Vietnamese ✓
-    50000 50% (1m 3s) 3.4192 Blanc / Scottish ✗ (French)
-    55000 55% (1m 10s) 1.6422 Hunter / German ✗ (Scottish)
-    60000 60% (1m 16s) 0.7238 Bekyros / Greek ✓
-    65000 65% (1m 22s) 1.5291 Phung / Korean ✗ (Vietnamese)
-    70000 70% (1m 29s) 0.2083 Roijakkers / Dutch ✓
-    75000 75% (1m 35s) 3.1336 Macias / Portuguese ✗ (Spanish)
-    80000 80% (1m 41s) 2.6630 Segher / German ✗ (Dutch)
-    85000 85% (1m 48s) 2.1963 Garcon / English ✗ (French)
-    90000 90% (1m 54s) 0.5499 Janacek / Czech ✓
-    95000 95% (2m 0s) 0.9890 Alemagna / Italian ✓
-    100000 100% (2m 7s) 0.0203 Antonopoulos / Greek ✓
+    5000 5% (0m 6s) 2.8651 Matocha / Spanish ✗ (Czech)
+    10000 10% (0m 13s) 2.4233 Marek / Czech ✗ (Polish)
+    15000 15% (0m 19s) 1.0850 Than / Chinese ✗ (Vietnamese)
+    20000 20% (0m 26s) 2.1696 Holst / Italian ✗ (German)
+    25000 25% (0m 32s) 1.8043 Halabi / Japanese ✗ (Arabic)
+    30000 30% (0m 39s) 3.0585 Kaube / Japanese ✗ (German)
+    35000 35% (0m 45s) 2.6277 Kinniburgh / Russian ✗ (English)
+    40000 40% (0m 52s) 0.7316 Szwedko / Polish ✓
+    45000 45% (0m 58s) 0.6504 Mar / Chinese ✓
+    50000 50% (1m 5s) 2.8351 Issa / Czech ✗ (Arabic)
+    55000 55% (1m 11s) 1.4687 Schrader / German ✓
+    60000 60% (1m 18s) 0.1880 O'Ryan / Irish ✓
+    65000 65% (1m 24s) 0.9203 Torres / Portuguese ✓
+    70000 70% (1m 31s) 1.4702 Sierzant / Polish ✓
+    75000 75% (1m 37s) 0.1615 Paraskos / Greek ✓
+    80000 80% (1m 44s) 2.2573 Grulich / Irish ✗ (Czech)
+    85000 85% (1m 50s) 1.6162 Mata / Japanese ✗ (Portuguese)
+    90000 90% (1m 57s) 2.2250 Guillory / English ✗ (French)
+    95000 95% (2m 3s) 2.8842 Diaz / Vietnamese ✗ (Spanish)
+    100000 100% (2m 10s) 3.4297 Botros / Greek ✗ (Arabic)
 
 
 Plotting the Results
@@ -720,19 +720,19 @@ Running on User Input
  .. code-block:: none
 
     > Dovesky
-    (-0.16) Russian
-    (-2.44) Czech
-    (-3.72) Irish
+    (-0.23) Russian
+    (-1.86) Czech
+    (-3.87) English
 
     > Jackson
-    (-1.18) English
-    (-1.64) Russian
-    (-1.70) Scottish
+    (-0.90) English
+    (-1.01) Scottish
+    (-1.79) Russian
 
     > Satoshi
-    (-0.66) Arabic
-    (-1.62) Italian
-    (-2.00) Japanese
+    (-1.47) Arabic
+    (-1.50) Japanese
+    (-1.63) Polish
 
 
 The final versions of the scripts `in the Practical PyTorch
@@ -779,7 +779,7 @@ Exercises
 
 
 
-**Total running time of the script:** ( 2 minutes  14.081 seconds)
+**Total running time of the script:** ( 2 minutes  17.407 seconds)
 
 
 .. _sphx_glr_download_intermediate_char_rnn_classification_tutorial.py:
